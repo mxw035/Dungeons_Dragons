@@ -52,6 +52,7 @@ Her left arm is in a cloth sling and there are various stages of brusing on her 
     $("#next").click(function(){
       let number = count
       let text = conversation[number].quote
+      count = count + 1
       $("#said").html(text)
     });
     $("#conyberry").click(function(){
