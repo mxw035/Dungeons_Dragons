@@ -1,0 +1,12 @@
+<div>
+  <button id="d6">D6</button>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#d6").click(function(){
+      let number = Math.floor(Math.random() * 6)
+      $("#num").html(number)
+        });
+    });
+</script>
+  
