@@ -1,0 +1,12 @@
+<div>
+  <button id="d100">D100</button>
+  <p id="num"></p>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#d100").click(function(){
+      let number = Math.floor(Math.random() * 10) * 10
+      $("#num").html(number);
+    });
+  });
+</script>
