@@ -5,10 +5,42 @@
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    const places = [
+      {key: 1, 
+       name: "StoneHill Inn"
+    }, {
+      key: 2, 
+      name: "Barthen's Provisions"
+    }, {
+      key: 3, 
+      name: "Edermath Orchard"
+    }, {
+      key: 4, 
+      name: "Lionshield Coster"
+    }, {
+      key: 5, 
+      name: "Phandalin Miner's Exchange"
+    }, {
+      key: 6, 
+      name: "Alderleaf Farm"
+    }, {
+      key: 7, 
+      name: "Shrine of Luck"
+    }, {
+      key: 8, 
+      name: "The Sleeping Giant"
+    }, {
+      key: 9, 
+      name: "Tresendar Mannor"
+    }
+      
+    ];
     $("document").ready(function(){
       $("#rando").click(function(){
           let number = Math.floor(Math.random() * 9);
-          $("#output").html(number)
+          let place = places[number].name;
+          $("#output").html(number + ":"
+ + place)
       });
     });
   </script>
