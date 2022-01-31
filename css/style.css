@@ -3,3 +3,15 @@
 body {
   text-align: center;
 }
+# d20 {
+  background-color: teal;
+  color: white;
+}
+# d12 {
+  background-color: blue;
+  color: white;
+}
+#d6 {
+  background-color:green;
+  color:white;
+}
