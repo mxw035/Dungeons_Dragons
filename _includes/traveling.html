@@ -1,0 +1,49 @@
+<div>
+<h2>Traveling Rules</h2>
+<p>Distance: 24 miles in 10 hours</p>
+<p>2.4 miles per hour</p>
+  <h1 id="num"></h1>
+</div>
+
+<div>
+<h2>Hunting</h2>
+  {% includes d20.html %}
+  <p>If > 15 then hunt</p>
+</div>
+
+<div>
+<h2>Day Time attacks</h2>
+  <p>Roll D20 if 17-20 then fight</p>
+  {% include d20.html %}
+  <p>Roll D12 to determine monster</p>
+  <button id="mon">Monster</button>
+  <p id="monster"></p>
+</div>
+
+<div>
+<h2>Night Time attacks</h2>
+</div>
+
+<script>
+  $("document").ready(function(){
+    $("#mon").click(function(){
+      let number = Math.floor(Math.random() * 12);
+      if(number === 1 | number === 2){
+        $("#monster").html("Striges")
+      }else  if (number === 3 | number === 3){
+        $("#monster").html("Ogre")
+      }else if(number === 5 | number === 6){
+        $("#monster").html("Goblins")
+          }else if(number === 7 | number === 8){
+          $("#monster").html("Hobgoblins")
+        }else if(number ===  9 | number === 10){
+          $("#monster").html("Orcs")
+        }else if(number === 11){
+          $("#monster").html("Wolves")
+        }else if(number === 12){
+          $("#monster").html("Owlbear")
+        }
+    });
+  });
+</script>
+      
