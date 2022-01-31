@@ -3,20 +3,22 @@
 <p>Distance: 24 miles in 10 hours</p>
 <p>2.4 miles per hour</p>
   <h1 id="num"></h1>
+  {% include d20.html %}
 </div>
 
 <div>
 <h2>Hunting</h2>
-  {% include d20.html %}
+  
+  <p>Roll D20</p>
   <p>If > 15 then hunt</p>
 </div>
 
 <div>
 <h2>Day Time attacks</h2>
   <p>Roll D20 if 17-20 then fight</p>
-  {% include d20.html %}
+  
   <p>Roll D12 to determine monster</p>
-  <button id="mon">Monster</button>
+  <button id="mon" class="w3-button w3-round w3-amber">Monster</button>
   <p id="monster"></p>
 </div>
 
