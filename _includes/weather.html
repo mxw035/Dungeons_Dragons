@@ -1,0 +1,29 @@
+<div>
+  <h2>Weather</h2>
+  <p id="weather"></p>
+</div>
+<script>
+  const weather = [
+    {
+      key: 1, 
+      name: "snow"
+  }, {
+    key: 2, 
+    name: "rain"
+  },{
+    key: 3, 
+    name: "windy"
+  },{
+    key: 4, 
+    name: "sunny"
+  }, {
+    key: 5, 
+    name: "cloudy"
+  }
+  ];
+  let number = Math.floor(Math.random() * 5)
+  let text = weather[number].name
+  $("document").ready(function(){
+    $("#weather").html(text)
+  });
+</script>
