@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> {{page.title}} | {{site.title}} </title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+
+<link rel="preload" href="{{'css/stylesheet.css' | relative_url}}" as="style">
+<link rel="stylesheet" href="{{'css/stylesheet.css' | relative_url}}">
+
+                                                                 
+</head>
+  <body>
+  <main>
+    {{page.title}}
+    {% include sidebar.html %}
+    <button>StoneHill Inn</button>
+    <button>Barthen's Provisions</button>
+    <button>EderMath Orchard</button>
+    <button>LionSheild Coster</button>
+    <button>Phandalin Miner's Exchange</button>
+    <button>Alderleaf Farm</button>
+    <button>Shrine of Luck</button>
+    <button>The Sleeping Giant</button>
+    <button>TownMastet's Hall</button>
+    <button> Tresendar Manor</button>
+    <button id="rando">Random</button>
+    <p id="output"></p>
+    <script>
+      $("document").ready(function(){
+        $("#rando").click(function(){
+          let number = Math.floor(Math.random() * 9)
+          $("#output").html(number)
+        });
+      });
+    </script>
+    </main>
+  </body>
