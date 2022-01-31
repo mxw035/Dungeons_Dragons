@@ -1,0 +1,10 @@
+<nav>
+  {% assign mypages = site.pages | sort: 'order' %}
+  {% for page in mypages %}
+  <button>
+    <a href="{{page.url | absolute_url}}">
+      {{page.title}}
+    </a>
+  </button>
+  {% end for %}
+</nav>
