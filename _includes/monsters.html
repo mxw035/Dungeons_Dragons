@@ -1,0 +1,43 @@
+<nav>
+  <button id="striges">Striges</button>
+  <button id="ghouls">Ghouls</button>
+  <button id="orge">Ogre</button>
+  <button id="goblins">Goblins</button>
+  <button id="hob">HobGoblins</button>
+  <button id="orcs">Orcs</button>
+  <button id="wolves">Wolves</button>
+  <button id="owl">Owlbear</button>
+</nav>
+<div>
+  <h1 id="name"></h1>
+  <h2 id="hp"></h2>
+  <h3 id="ac"></h3>
+  <h4 id="speed"></h4>
+  <h5 id="str"></h5>
+  <h5 id="per"></h5>
+  <h6 id="xp"></h6>
+  <h6 id="dice"></h6>
+  <p id="hit"></p>
+</div>
+<script>
+  const monsters = [
+    {
+      key: 1, 
+      name: "Strige", 
+      hp: 2, 
+      ac: 14, 
+      speed: 10 + ", fly 40", 
+      str: 4, 
+      per: 9, 
+      xp: 25, 
+      dice: "1d4+3"
+    }
+  ];
+  $("document").ready(function(){
+    $("#striges").click(function(){
+      $("#name").html(monsters[0].name)
+      $("#hp").html(monsters[0].hp)
+      $("#ac").html(monsters[0].ac)
+    });
+  });
+</script>
