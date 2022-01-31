@@ -1,7 +1,7 @@
 <nav>
   {% assign mypages = site.pages | sort: 'order' %}
   {% for page in mypages %}
-  <button>
+  <button class="w3-button w3-round w3-cyan">
     <a href="{{page.url | absolute_url}}">
       {{page.title}}
     </a>
