@@ -10,11 +10,21 @@ order: 3
 It appears to be made of stone from the surronding ruins around town.</li>
     <li>Through the window you see a young elf working at the alter. Whe she turns you notice her injuries. 
 Her left arm is in a cloth sling and there are various stages of brusing on her face.</li>
+    <li>You enter the Shrine and the elf immeditaley looks up quickly taking in your apperance. "You must be the travelers I have heard so much about.
+      How can I help you?</li>
   </ul>
 </div>
 <div class="w3-half">
 <h2>People</h2>
-<p></p>
+<p>Sister Garaele</p>
   <button id="speak"> Speak </button>
   <p id="said"></p>
 </div>
+<script>
+  $("document").ready(function(){
+    $("#speak").click(function(){
+      let first = "She leads you past the shrine and into the back hall it has a curain seperating it from the main room and upon entering you notice that it is crammed packed with relics and other objects with a small walking path leading to a door. When opened the door leads to a small yard. Chickens are running around trying to catch worms and other bugs that live in the grass. Her home is a small cottage tucked into the corner of the yard. She welcomes you in to a small room with a open door way straight ahead and a closed door on the right. She invites you to sit at the chairs around the table to the left.'Welcome to my home. Please take a seat while I put water on for tea. Oh my name is Sister Garaele'. She walkes through the open door way and there is the clear sound of water being put into a kettel and rummaging in a cuppord."
+      $("#said").html(first)
+    });
+  });
+</script>
