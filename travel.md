@@ -1,6 +1,6 @@
 ---
 title: Traveling
-layout: default
+layout: local
 order: 4
 ---
 {% include traveling.html %}
