@@ -1,0 +1,15 @@
+<div>
+  <h1>Random Selection</h1>
+  <p id="output"></p>
+  <button id="rando">Random</button>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $("document").ready(function(){
+      $("#rando").click(function(){
+          let number = Math.floor(Math.random() * 9);
+          $("#output").html(number)
+      });
+    });
+  </script>
+    
