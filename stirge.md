@@ -1,5 +1,5 @@
 --- 
-title: Strige
+title: Stirge
 layout: default
 order: 5
 ---
