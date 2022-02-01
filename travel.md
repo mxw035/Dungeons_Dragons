@@ -5,3 +5,4 @@ order: 4
 ---
 {% include traveling.html %}
 {% include monsters.html %}
+{% include dice.html %}
