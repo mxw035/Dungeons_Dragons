@@ -1,6 +1,6 @@
 
 <nav>
-  <button id="stirges" onclick="document.getElementById('stirge').style.display('block')">Stirges</button>
+  <button id="stirges">Stirges</button>
   <button id="ghouls">Ghouls</button>
   <button id="orge">Ogre</button>
   <button id="goblins">Goblins</button>
@@ -9,44 +9,5 @@
   <button id="wolves">Wolves</button>
   <button id="owl">Owlbear</button>
 </nav>
-<div id="stirge">
-  <h1 id="name">Stirge</h1>
-  <h2 id="hp">Hp 2</h2>
-  <h3 id="ac">AC 14</h3>
-  <h4 id="speed">Speed 10, fly 40</h4>
-  <h5 id="str">STR 4</h5>
-  <h5 id="per">PER 9</h5>
-  <h6 id="xp">XP 25</h6>
-  <h6 id="dice">1d4 + 3</h6>
-  <p id="hit"></p>
-</div>
 
-<script>
-  const monsters = [
-    {
-      key: 1, 
-      name: "Stirge", 
-      hp: 2, 
-      ac: 14, 
-      speed: 10 + ", fly 40", 
-      str: 4, 
-      per: 9, 
-      xp: 25, 
-      dice: "1d4+3"
-    }
-  ];
-  $("document").ready(function(){
-    $("#stirges").click(function(){
-      $("#name").html(monsters[0].name)
-      $("#hp").html("HP" + monsters[0].hp)
-      $("#ac").html("AC" + monsters[0].ac)
-      $("#speed").html("Speed" + monsters[0].speed)
-      $("#str").html("STR" + monsters[0].str)
-      $("#per").html("PER": + monsters[0].per)
-      $("#xp").html("XP" + monsters[0].xp)
-      $("#dice").html("Dice" + monsters[0].dice)
-      
-    });
-  });
-</script>
 
