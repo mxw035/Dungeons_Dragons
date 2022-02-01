@@ -1,0 +1,67 @@
+---
+title: Edermath Orchard
+layout: local
+---
+<div>
+  <h2>Description</h2>
+  <p>You head away from the Stonehill Inn. Walkling towards the north east end of town. When you get to Barthen's Provisions you notice a road going 
+    off to the left. There is a sign saying this way to Edermath Orchard. You travel this road till its end passing by the back side of the Shrine of Luck and Garaele's home.
+    Chickens run free in the yard. You approach the Orchard and smell the beautiful smell of fresh tilled earth. Out in the front pasture is an elderly looking man. 
+    Strongly built with silver hair. You notice that he is at least part elf.</p>
+  <h2>People</h2>
+  <ul>
+    <li>Daran Edermath</li>
+  </ul>
+</div>
+<div>
+  <h2>Conversation</h2>
+  <p id="speak">Well hello. I heard that you all had arrived into town? How can I help you?</p>
+  <button id="next">Next</button>
+</div>
+<div>
+  <p>Already completed the Old Owl Trouble and Redbrand Hideout? See what Daran has to say?</p>
+  <button id="talk">Talk</button>
+  <p id="out"></p>
+  <button id="join">Join</button>
+</div>
+<script>
+  const convo = [
+    {
+      key: 0, 
+      talk: "Yes I used to be an adventurer too. The important thing to remeber is that we are here to smite evil, enforce justice and enact retribution. From what I have heard you all have done a great job thus far"
+    }, 
+    {
+      key: 1, 
+      talk: "I keep an eye around town and try to look out for the local people. I have had growing concerns regarding the Redbrand Ruffians that have moved in. Have you interacted with them yet?"
+    }, 
+    {
+      key: 2, 
+      talk: "I think someone needs to put a stop to them and their leader Glasstaff. If you are up to the challenge you can find him in the Sleeping Giant or at the safe house under the Tressor Mannor."
+    }, 
+    {
+      key: 3, 
+      talk: "Oh you have already taken care of Glasstaff? Well maybe you can helpout with another problem. I have heard tell of people digging around the ruins of Old Owl Well. The local prospectors have even said that they are being chased away from the area by some undead creatures. Maybe you should take a look?"
+    }, {
+      key: 4, 
+      talk: "It is about a two day march from here to the northeast. There is an old watch tower that was once an ancient magical empire called Netheril. I worry that this ancient and dangerous magic might have something to do with it."
+    }, {}
+  ];
+  let count = 0 
+  $("document").ready(function(){
+    $("#next").click(function(){
+      let number = count
+      $("#speak").html(convo[number].talk)
+      count = count + 1
+    });
+   $("#talk").click(function(){
+    let order = "Well you all have done a great job of helping Phandalin. You have the heart of adventurers. I think that you would be a great fit for the Order of the Gaunlet. We hold honnor and vigilance in high esteem and aim to protect the people and seek out justice on thier behalf. What do you say want to join?"
+    let join = "You have joined the Order of the Gauntlet and shall now on be known by the title of Chevall"
+    $("#out").html(order)
+   });
+    $("#join").click(function(){
+    let join = "You have joined the Order of the Gauntlet and shall now on be known by the title of Chevall"
+    $("#out").html(join)
+    });
+  });
+  
+</script>
