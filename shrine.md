@@ -21,7 +21,7 @@ Her left arm is in a cloth sling and there are various stages of brusing on her 
   <p id="said"></p>
   <button id="next">Next</button>
   <div id="extra">
-    <button id="conyberry" class="w3-button w3-round w3-lime"><a href="lair.html">Conyberry and Agathas Lair</a></button>
+    <button id="conyberry" class="w3-button w3-round w3-lime"><a href="triboar.html">Conyberry and Agathas Lair</a></button>
   </div>
 </div>
 <script>
