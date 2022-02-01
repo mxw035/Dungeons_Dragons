@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: town
 title: Home page
 order: 1
 ---
