@@ -36,14 +36,15 @@
   $("document").ready(function(){
     $("#striges").click(function(){
       $("#name").html(monsters[0].name)
-      $("#hp").html(monsters[0].hp)
-      $("#ac").html(monsters[0].ac)
-      $("#speed").html(monsters[0].speed)
-      $("#str").html(monsters[0].str)
-      $("#per").html(monsters[0].per)
-      $("#xp").html(monsters[0].xp)
-      $("#dice").html(monsters[0].dice)
+      $("#hp").html("HP" + monsters[0].hp)
+      $("#ac").html("AC" + monsters[0].ac)
+      $("#speed").html("Speed" + monsters[0].speed)
+      $("#str").html("STR" + monsters[0].str)
+      $("#per").html("PER": + monsters[0].per)
+      $("#xp").html("XP" + monsters[0].xp)
+      $("#dice").html("Dice" + monsters[0].dice)
       
     });
   });
 </script>
+{% include dice.html %}
