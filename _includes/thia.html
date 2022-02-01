@@ -4,21 +4,21 @@
   <h2>AC: 12</h2>
   <h2>STR: +0</h2>
   <h2>Dex: + 2</h3>
-  <button id="sword">Sword</button>
-  <button id="bow">Spear</button>
-  <button id="check">AC Check</button>
+  <button id="tsword">Sword</button>
+  <button id="spear">Spear</button>
+  <button id="tcheck">AC Check</button>
 </div>
 <script>
   $("document").ready(function(){
-    $("#sword").click(function(){
+    $("#tsword").click(function(){
       let num = Math.floor(Math.random() * 6) + 6
       $("#res").html(num)
     });
-    $("#bow").click(function(){
+    $("#spear").click(function(){
       let num = Math.floor(Math.random() * 6) + 8 
       $("#res").html(num)
     });
-    $("#check").click(function(){
+    $("#tcheck").click(function(){
       let num = Math.floor(Math.random() * 20) +2
       $("#res").html(num)
     });
