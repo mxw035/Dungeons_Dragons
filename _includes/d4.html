@@ -1,0 +1,11 @@
+<div>
+  <button id="d4">D4</button>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#d4").click(function(){
+      let number = Math.floor(Math.random() * 4)
+      $("#num").html(number)
+    });
+  });
+</script>
