@@ -11,6 +11,7 @@ layout: local
   <p>Agatha the Banshee</p>
   <h3>Questions</h3>
   <button id="kind">Kind Response</button>
+  <button id="comb">Give Comb</button>
   <button id="win">Check pass</button>
   <button id="rude">Rude Response</button>
   <button id="fail">Fail Pass</button>
@@ -77,6 +78,9 @@ layout: local
     });
     $("#castle").click(function(){
       $("#text").html(castle)
+    });
+    $("#comb").click(function(){
+      $("#text").html(win)
     });
     $("#complete").click(function(){
       $("#text").html(xp)
