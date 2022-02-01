@@ -1,2 +1,27 @@
-<div class="w3-third">
-  
+<div class="w3-third w3-teal"> 
+  <h1>Kildrak</h1>
+  <h2>Hp: 16</h2>
+  <h2>AC: 18</h2>
+  <h2>STR: +2</h2>
+  <h2>Dex: -1</h3>
+  <p id="res"></p>
+  <button id="sword">WarHammer</button>
+  <button id="bow">Handaxe</button>
+  <button id="check">AC Check</button>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#sword").click(function(){
+      let num = Math.floor(Math.random() * 8) + 2
+      $("#res").html(num)
+    });
+    $("#bow").click(function(){
+      let num = Math.floor(Math.random() * 6) + 2 
+      $("#res").html(num)
+    });
+    $("#check").click(function(){
+      let num = Math.floor(Math.random() * 20) -1
+      $("#res").html(num)
+    });
+  });
+</script>
