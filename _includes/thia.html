@@ -1,0 +1,27 @@
+<div class="w3-third w3-teal"> 
+  <h1>Galanodel Thia</h1>
+  <h2>Hp: 14</h2>
+  <h2>AC: 12</h2>
+  <h2>STR: +0</h2>
+  <h2>Dex: + 2</h3>
+  <p id="res"></p>
+  <button id="sword">Sword</button>
+  <button id="bow">Spear</button>
+  <button id="check">AC Check</button>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#sword").click(function(){
+      let num = Math.floor(Math.random() * 6) + 6
+      $("#res").html(num)
+    });
+    $("#bow").click(function(){
+      let num = Math.floor(Math.random() * 6) + 8 
+      $("#res").html(num)
+    });
+    $("#check").click(function(){
+      let num = Math.floor(Math.random() * 20) +2
+      $("#res").html(num)
+    });
+  });
+</script>
