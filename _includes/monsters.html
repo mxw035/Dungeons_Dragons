@@ -1,5 +1,5 @@
 <nav>
-  <button id="striges"><a href="{{'stirges.html' | relative_url}}"> Striges </a></button>
+  <button id="striges"> Striges</button>
   <button id="ghouls">Ghouls</button>
   <button id="orge">Ogre</button>
   <button id="goblins">Goblins</button>
@@ -38,6 +38,12 @@
       $("#name").html(monsters[0].name)
       $("#hp").html(monsters[0].hp)
       $("#ac").html(monsters[0].ac)
+      $("#speed").html(monsters[0].speed)
+      $("#str").html(monsters[0].str)
+      $("#per").html(monsters[0].per)
+      $("#xp").html(monsters[0].xp)
+      $("#dice").html(monsters[0].dice)
+      
     });
   });
 </script>
