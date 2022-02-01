@@ -4,14 +4,78 @@ layout: local
 ---
 <div>
   <h2>Food</h2>
+  <button id="gallon">Ale Gallon 2sp</button>
+  <button id="mug">Ale Mug 4cp</button>
+  <button id="pic">Wine Pitcher 2sp</button>
+  <button id="bottle">Wine Bottle 10gp</button>
+  <button id="poor">Meal Poor 6cp</button>
+  <button id="mod">Meal Modest 3sp</button>
+  <button id="comfy">Meal Comfortable 5sp</button>
+  <button id="wealth">Meal Wealthy 8sp</button>
+<hr>
   <h2>Board</h2>
+  <button id="innP">Room Poor 1sp</button>
+  <button id="innM">Room Modest 5sp</button>
+  <button id="innC">Room Comfortable 5sp</button>
+  <button id="innW">Room Wealthy 8sp</button>
+  <hr>
   <h2>People</h2>
-  <button>Narth</button>
-  <button>Elsa</button>
-  <button>Lanar</button>
-  <button>Trilena</button>
-  <button>Pip</button>
-  <button>Freda</button>
+  <button id="narth">Narth</button>
+  <button id="elsa">Elsa</button>
+  <button id="lanar">Lanar</button>
+  <button id="tril">Trilena</button>
+  <button id="pip">Pip</button>
+  <button id="freda">Freda</button>
+  <p id="speak"></p>
+</div>
+<div>
+  <p>Some one approches the table</p>
+  <button id="peeps">Who?</button>
+  <p id="person"></p>
 </div>
 <script>
+  $("document").ready(function(){
+    $("#narth").click(function(){
+      $("#speak").html("Sister Garaele, who oversees the Shrine of Luck, recently left for a few days. When she came back she was quite injuried and looked exhuasted. Maybe she could use your help")
+    });
+    $("#elsa").click(function(){
+      $("#speak").html("Daran Edermath, the orchard keeper, is a former adventurer just like you all.")
+    });
+    $("#lanar").click(function(){
+      $("#speak").html("Orc raiders have been seen on the east end of the Triboar Trail. The townmaster is looking for someone to take care of them")
+    });
+    $("#tril").click(function(){
+      $("#speak").html("Thel Dendrar, a local woodcarver, stood up tot he Redbrands a tenday ago when they came by his shop and leered at his wife. The ruffians killed him. Serveral townsfolk saw it happen. The Redbrands grabbed his body, and now his wife, daughter and son have gone missing too.")
+    });
+    $("#pip").click(function(){
+      $("#speak").html("My friend Carp found a secret tunnel in the woods he said it leads to the Redbrand hideout.... You know Carp Qelline Alderleaf's son? Anyways dont tell him I told you")
+      
+    });
+    $("#freda").click(function(){
+      $("#speak").html("The Redbrands hassle every business in town, except for the Phandalin Miner's Exchange. They know not to mess with Halia Thronton")
+    });
+  });
+</script>
+<script>
+  const people = [
+    {
+      pep: "Narth"
+    }, {
+      pep: "Elsa"
+    }, {
+      pep: "Lanar"
+    }, {
+      pep: "Trilena"
+    }, {
+      pep: "Pip"
+    }, {
+      pep: "Freda"
+    }
+  ];
+  $("document").ready(function(){
+    $("#peeps").click(function(){
+      let num = Math.floor(Math.random() * 6)
+      $("#person").html(people[num].pep)
+    });
+  });
 </script>
