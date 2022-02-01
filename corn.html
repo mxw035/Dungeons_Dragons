@@ -53,8 +53,8 @@ layout: local
   ];
   $("document").ready(function(){
     $("#explore").click(function(){
-    
-      $("#text").html(words[count].text)
+      let number = count 
+      $("#text").html(words[number].text)
           count = count + 1
     });
     $("#kind").click(function(){
