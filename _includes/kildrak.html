@@ -4,21 +4,21 @@
   <h2>AC: 18</h2>
   <h2>STR: +2</h2>
   <h2>Dex: -1</h3>
-  <button id="sword">WarHammer</button>
-  <button id="bow">Handaxe</button>
-  <button id="check">AC Check</button>
+  <button id="ham">WarHammer</button>
+  <button id="axe">Handaxe</button>
+  <button id="kcheck">AC Check</button>
 </div>
 <script>
   $("document").ready(function(){
-    $("#sword").click(function(){
-      let num = Math.floor(Math.random() * 8) + 2
+    $("#ham").click(function(){
+      let num = Math.floor(Math.random() * 8) + 6
       $("#res").html(num)
     });
-    $("#bow").click(function(){
-      let num = Math.floor(Math.random() * 6) + 2 
+    $("#axe").click(function(){
+      let num = Math.floor(Math.random() * 6) + 6 
       $("#res").html(num)
     });
-    $("#check").click(function(){
+    $("#kcheck").click(function(){
       let num = Math.floor(Math.random() * 20) -1
       $("#res").html(num)
     });
