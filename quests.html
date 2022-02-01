@@ -1,0 +1,66 @@
+---
+title: Quests 
+layout: local
+---
+<div>
+  <h1>List of Quests</h1>
+  <ul>
+    <li>Old Owl Trouble</li>
+    <li>Recoverd Goods (Cragmaw Castle)</li>    
+    <li>Finding Cragmaw Castle</li>
+    <li>Halia's Job Offer</li>
+    <li>Reidoth the Druid</li>
+    <li>The Banshee's Bargin</li>
+    <li>Orc Trouble</li>
+    <li>Finding Iarno</li>    
+    <li>Mirna's Heirloom</li>
+  </ul>
+  <button id="random">Can't Decide?</button>
+  <p id="qNum"></p>
+</div>
+<nav>
+  <button>Old Owl Trouble</button>
+  <button>Recoverd Goods</button>
+  <button>Finding Cragmaw Castle</button>
+  <button>Halia's Job Offer</button>
+  <button>Reidoth the Druid</button>
+  <button><a href="shrine.html">The Banshee's Bargin</a></button>
+  <button>Orc Trouble</button>
+  <button>Finding Iarno</button>
+  <button>Mirna's Heirloom</button>
+  
+  
+</nav>
+
+<script>
+  const log = [
+    {
+      quest: "Old Owl Trouble"    
+    }, 
+    {
+      quest: "Recoverd Goods"
+    }, 
+    {
+      quest: "Finding Cragmaw Castle"
+    }, 
+    {
+     quest: "Halia's Job Offer"
+    }, {
+      quest: "Reidoth the Druid"
+    }, {
+      quest: "The Banshee's Bargin"
+    }, {
+       quest: "Orc Trouble"
+      }, {
+       quest: "Finding Iarno"
+      }, {
+       quest: "Mirna's Heirloom"   
+      }
+  ];
+  $("document").ready(function(){
+   $("#random").click(function(){
+      let num = Math.floor(Math.random() * 9)
+      $("#qNum").html(log[num].quest)
+   });
+  });
+</script>
