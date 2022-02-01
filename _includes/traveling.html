@@ -4,36 +4,15 @@
 <p>2.4 miles per hour</p>
    {% include weather.html %}
 </div>
-
-
 <div class="w3-half">
 <h2>Hunting</h2>
-  
   <p>Roll D20</p>
   <p>If > 15 then hunt</p>
 </div>
-<div class="w3-half">
-  <h1>Monster</h1>
-  <p id="monster"></p>
-</div>
-<div class="w3-half">
-<h2>Day Time attacks</h2>
-  <p>Roll D20 if 17-20 then fight</p>
-  
-  <p>Roll D12 to determine monster</p>
-  <button id="day" class="w3-button w3-round w3-amber">Monster</button>
-  
-</div>
-
-<div class="w3-half">
-<h2>Night Time attacks</h2>
-  <button id="night" class="w3-button w3-round w3-amber"> Monster</button>
+<div>
+   <h2>Monsters</h2>
+   {% include monsters.html %}
 </div>
    
-
-
-
-{% include day.html %}
-{% include night.html %}
 {% include dice.html %}
       
