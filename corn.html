@@ -1,0 +1,85 @@
+---
+title: Cornberry
+layout: local
+---
+<div>
+  <h3>Description</h3>
+  <p id="text">The town of Cornberry was once a bustling place with a market area for farmers. However the town has long since been abandoned and sacked by barbarians. 
+    It now lays in runis with weeds overgrowing the fallen stone</p>
+  <button id="explore" class="w3-button w3-round w3-light-green">Explore</button>
+  <h3>People</h3>
+  <p>Agatha the Banshee</p>
+  <h3>Questions</h3>
+  <button id="kind">Kind Response</button>
+  <button id="win">Check pass</button>
+  <button id="rude">Rude Response</button>
+  <button id="fail">Fail Pass</button>
+  <button id="spell">Spellbook</button>
+  <button id="cave">Location of Wave Echo Cave</button>
+  <button id="castle">Location of Cragmaw Castle</button>
+  <button id="complete">Completed</button>
+</div>
+<script>
+  const kind = "Make a DC 15 Charisma/Persuasion check" 
+  const win = "The ghostly figure smiles with cold amusement. 'Very well,' she says. 'I know that you seek many things. Ask me one question, and I will give you an answer"
+  const lose = "Agatha lets out an earsplitting howel of rage and then disapears."
+  const spell = "'Ahh yes that spell book. Bowgentl's was it?'. She pauses for a moment as if trying to remeber. 'Yes I traded that to a necromancer by the name of Tsernoth from the city of Iriaebor over 100 years ago. I am not sure what Tsernoth has done with it.'"
+  const xp = "Very well done adventurers 200 xp points to divide amongst you"
+  const castle = "The castle is located 5 miles to the east and 20 miles north of the Triboar Trail exiting Phandalin."
+  const cave = "Ahh yes looking for your lost friends? You will find the cave is about 15 miles south of Cornberry."
+  const spider = ""
+  const well = " "
+  let count = 0
+  const words = [
+    {key: 0, 
+     text: "Need a D10 Perception Check"
+    }, 
+    {
+      key: 1, 
+      text: "You notice a trail leading northwest into the NeverWood. The path appears nolonger used and plants have overgrown the path."
+    }, {
+      key: 2, 
+      text: "As you head down the path. THe forest grows dark and still as the trail winds deeper into the trees. Heavy vines and thick layers of moss drape the branches , and the air is noticeably colder than it was in the ruined village. You travel this path for 5 miles. Rounding a bend in the trail, your see a screen made from the warped branches of trees standing close together, woven into a domelike shelter in the shadows. A low doorway leads inside."
+    }, {
+      key: 3, 
+      text: "What should you do?"
+    }, {
+      key: 4, 
+      text: "You enter the doorway. A home of sorts is sheltered within the dome of woven branches. It is sparsely furnised with chests, shelves, a table, and a reclined couch, all of it old and of elven craft."
+    }, {
+      key: 5, 
+      text: "The air grows cold, and a powerful feeling of dread grips you. A cold, pale light flickers in the air, rapidly taking on the form of a female elf, her hair and robes waving in a spectral wind. She might have been beautiful once, but a hateful expression twists her features now. 'Foolish mortals' she snarls. 'What do you want here? Do you not know it is death to seek me out?'"
+    }    
+  ];
+  $("document").ready(function(){
+    $("#explore").click(function(){
+      $("#text").html(words[count].text)
+      count = count + 1
+    });
+    $("#kind").click(function(){
+      $("#text").html(kind)
+    });
+    $("#win").click(function(){
+      $("#text").html(win)
+    });
+    $("#rude").click(function(){
+      $("#text").html(lose)
+    });
+    $("#fail").click(function(){
+      $("#text").html(lose)
+    });
+    $("#spell").click(function(){
+      $("#text").html(spell)
+    });
+    $("#cave").click(function(){
+      $("#text").html(cave)
+    });
+    $("#castle").click(function(){
+      $("#text").html(castle)
+    });
+    $("#complete").click(function(){
+      $("#text").html(xp)
+    });
+    
+  });
+      
