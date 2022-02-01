@@ -1,5 +1,5 @@
 <nav>
-  <button id="striges"> Striges</button>
+  <button id="stirges"> Stirges</button>
   <button id="ghouls">Ghouls</button>
   <button id="orge">Ogre</button>
   <button id="goblins">Goblins</button>
@@ -19,12 +19,14 @@
   <h6 id="dice"></h6>
   <p id="hit"></p>
 </div>
+<div>
 {% include dice.html %}
+</div>
 <script>
   const monsters = [
     {
       key: 1, 
-      name: "Strige", 
+      name: "Stirge", 
       hp: 2, 
       ac: 14, 
       speed: 10 + ", fly 40", 
@@ -35,7 +37,7 @@
     }
   ];
   $("document").ready(function(){
-    $("#striges").click(function(){
+    $("#stirges").click(function(){
       $("#name").html(monsters[0].name)
       $("#hp").html("HP" + monsters[0].hp)
       $("#ac").html("AC" + monsters[0].ac)
