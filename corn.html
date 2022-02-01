@@ -53,8 +53,9 @@ layout: local
   ];
   $("document").ready(function(){
     $("#explore").click(function(){
+    
       $("#text").html(words[count].text)
-      count = count + 1
+      
     });
     $("#kind").click(function(){
       $("#text").html(kind)
@@ -80,6 +81,6 @@ layout: local
     $("#complete").click(function(){
       $("#text").html(xp)
     });
-    
+    count = count + 1
   });
       
