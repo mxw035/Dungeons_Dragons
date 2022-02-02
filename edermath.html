@@ -16,7 +16,8 @@ layout: local
 <div>
   <h2>Conversation</h2>
   <p id="speak">Well hello. I heard that you all had arrived into town? How can I help you?</p>
-  <button id="next">Next</button>
+  <button id="next">Redbrands</button>
+  <button id="owl">Old Owl Well</button>
 </div>
 <div>
   <p>Already completed the Old Owl Trouble and Redbrand Hideout? See what Daran has to say?</p>
@@ -38,6 +39,9 @@ layout: local
       key: 2, 
       talk: "I think someone needs to put a stop to them and their leader Glasstaff. If you are up to the challenge you can find him in the Sleeping Giant or at the safe house under the Tressor Mannor."
     }, 
+    
+  ];
+  let old = [
     {
       key: 3, 
       talk: "Oh you have already taken care of Glasstaff? Well maybe you can helpout with another problem. I have heard tell of people digging around the ruins of Old Owl Well. The local prospectors have even said that they are being chased away from the area by some undead creatures. Maybe you should take a look?"
@@ -45,7 +49,7 @@ layout: local
       key: 4, 
       talk: "It is about a two day march from here to the northeast. There is an old watch tower that was once an ancient magical empire called Netheril. I worry that this ancient and dangerous magic might have something to do with it."
     }, {}
-  ];
+  ]
   let count = 0 
   $("document").ready(function(){
     $("#next").click(function(){
@@ -61,6 +65,12 @@ layout: local
     $("#join").click(function(){
     let join = "You have joined the Order of the Gauntlet and shall now on be known by the title of Chevall"
     $("#out").html(join)
+    });
+    let count2 = 0
+    $("#owl").click(function(){
+      let number = count2
+      $("#talk").html(old[count2].talk)
+      count2 = count2 + 1
     });
   });
   
