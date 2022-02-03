@@ -30,19 +30,26 @@
       let num = 1 
       hp = hp - num 
       $("#hp").html("HP " + hp)
+      if(hp <= 0){
+      $("#hp").html("Garret is defeated")
+    }
     });
     $("#5").click(function(){
       let num = 5 
       hp = hp - num 
       $("#hp").html("HP " + hp)
+      if(hp <= 0){
+      $("#hp").html("Garret is defeated")
+    }
     });
     $("#10").click(function(){
       let num = 10 
       hp = hp - num 
       $("#hp").html("HP " + hp)
-    });
-    if(hp <= 0){
+      if(hp <= 0){
       $("#hp").html("Garret is defeated")
     }
+    });
+    
   });
 </script>
