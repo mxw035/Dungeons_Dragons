@@ -1,0 +1,46 @@
+---
+title: Short Quests
+layout: local
+---
+<div>
+  <ul>
+    <li>Gold Prospecting</li>
+    <li>Hunting Trip</li>
+    <li>Slaying Monsters</li>
+  </ul>
+  <button id="rShort"></button>
+  <p id="quest"></p>
+  <p id="reward"></p>
+</div>
+<script>
+  $("document").ready(function(){
+    const shorts = [
+      {
+        q: "Hunting"
+      }, 
+      {
+        q: "slay monsters"
+      }, 
+      {
+        q: "gold prospecting"
+      }
+    ];
+    const rew = [
+      {
+        r: "5 gp each"    
+      }, 
+      {
+        r: "10 gp each"
+      }, 
+      {
+        r: "15 gp each" 
+      }
+    ];
+    $("#rShort").click(function(){
+      let num = Math.floor(Math.random()*3)
+      $("#quest").html(shorts[num].q)
+      let num2 = Math.floor(Math.random() *3)
+      $("#reward").html(rew[num2].r)
+    });
+  });
+</script>
