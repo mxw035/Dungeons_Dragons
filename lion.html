@@ -1,0 +1,79 @@
+--- 
+title: Lionsheild Coster
+layout: local
+---
+<div class="w3-half">
+  <h2>Description</h2>
+  <ul>
+    <li>Hanging above the front door of this modest trading post is a sign sharped like a wooden shield with a blue lion painted on it.</li>
+    <li>Upon entering the shop you see a sign that says in bold no Redbrands allowed</li>
+  </ul>
+</div>
+<div class="w3-half">
+  <h2>People</h2>
+  <ul>
+    <li>Linene Graywind</li>
+  </ul>
+  <p>Well hello, welcome</p>
+  <button id="next">Talk</button>
+</div>
+<div class="w3-half">
+  <h2>Goods for sale </h2>
+  <h3 id="due"></h3>
+  <button class="2gp">Dagger 2gp</button>
+  <button class="5gp">Handaxe 5gp</button>
+  <button class="5sp">Javelin 5sp</button>
+  <button class="2sp">Quarter Staff 2sp</button>
+  <button class="25gp">Shortbow 25gp</button>
+  <button class="25gp">Crossbow light 25gp</button>
+  <button class="15gp">Longsword 15gp</button>
+  <p>More options avaliable upon request</p>
+</div>
+  
+<script>
+  $("document").ready(function(){
+    const talk = [
+      {
+        key: 0, 
+        text: "I can not thank you all enough for getting my supplies back from those pesky goblins. Do you need any armor or weapons?"
+      }
+    ]
+  });
+</script>
+<script>
+  $("document").ready(function(){
+    let gp = 0
+    let sp = 0 
+    let cp = 0
+    $(".2gp").click(function(){
+      let num = gp 
+      gp = num + 2 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+    $(".5gp").click(function(){
+      let num = gp 
+      gp = num + 5 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+    $(".15gp").click(function(){
+      let num = gp 
+      gp = num + 15 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+    $(".25gp").click(function(){
+      let num = gp 
+      gp = num + 25 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+    $(".2sp").click(function(){
+      let num = sp 
+      sp = num + 2 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+     $(".5sp").click(function(){
+      let num = sp 
+      sp = num + 5 
+      $("#due").html(gp + ":" + sp + ":" + cp)
+    });
+  });
+</script>
