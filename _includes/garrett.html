@@ -1,15 +1,15 @@
 <div class="w3-third w3-teal"> 
   <h1>Garrett</h1>
-  <h2 id="hp">Hp: 14</h2>
+  <h2 id="ghp">Hp: 14</h2>
   <h2>AC: 14</h2>
   <h2>STR: -1</h2>
   <h2>Dex: + 3</h3>
   <button id="sword">Sword</button>
   <button id="bow">Short Bow</button>
   <button id="check">AC Check</button>
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
+  <button id="g1">-1</button>
+  <button id="g5">-5</button>
+  <button id="g10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
@@ -26,28 +26,28 @@
       let num = Math.floor(Math.random() * 20) +3
       $("#res").html(num)
     });
-    $("#1").click(function(){
+    $("#g1").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#ghp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#ghp").html("Garret is defeated")
     }
     });
-    $("#5").click(function(){
+    $("#g5").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#ghp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#ghp").html("Garret is defeated")
     }
     });
-    $("#10").click(function(){
+    $("#g10").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#ghp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#ghp").html("Garret is defeated")
     }
     });
     
