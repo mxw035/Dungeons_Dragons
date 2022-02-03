@@ -9,6 +9,7 @@
       <li>battleing</li>
       <li>Exploring or dc check</li>
    </ul>
+   <p id ="night"></p>
  <p id="action">Actions left: 10</p>
 <p id="mile">Miles Traveled: 0</p>
 <button id="ac">Action Made</button>    
@@ -36,7 +37,7 @@
          if(action <= 0){
             days = days + 1
             action = 10
-            $("#action").html("Time to make camp and rest")
+            $("#night").html("Time to make camp and rest. Watches? Battles?")
          }
          $("#action").html("Actions Left:" + action)
          $("#mile").html("Miles: " + miles)
