@@ -19,7 +19,7 @@ layout: local
 </div>
 <div class="w3-half">
   <h2>Weapons for sale </h2>
-  <h3 id="due"></h3>
+  <h3 id="total"></h3>
   <button class="2gp">Dagger 2gp</button>
   <button class="5gp">Handaxe 5gp</button>
   <button class="5sp">Javelin 5sp</button>
@@ -40,40 +40,4 @@ layout: local
     ]
   });
 </script>
-<script>
-  $("document").ready(function(){
-    let gp = 0
-    let sp = 0 
-    let cp = 0
-    $(".2gp").click(function(){
-      let num = gp 
-      gp = num + 2 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-    $(".5gp").click(function(){
-      let num = gp 
-      gp = num + 5 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-    $(".15gp").click(function(){
-      let num = gp 
-      gp = num + 15 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-    $(".25gp").click(function(){
-      let num = gp 
-      gp = num + 25 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-    $(".2sp").click(function(){
-      let num = sp 
-      sp = num + 2 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-     $(".5sp").click(function(){
-      let num = sp 
-      sp = num + 5 
-      $("#due").html(gp + ":" + sp + ":" + cp)
-    });
-  });
-</script>
+{% include coinscript %}
