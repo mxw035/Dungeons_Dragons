@@ -32,6 +32,12 @@
         $("#total").html(gp + ":" + sp + ":" + cp)
 
    });
+    $(".15gp").click(function(){
+      let num = gp 
+    gp = num + 15
+        $("#total").html(gp + ":" + sp + ":" + cp)
+
+   });
     $(".25gp").click(function(){
     let num = gp 
       gp = num + 25
@@ -67,6 +73,13 @@
       let num = sp
     
       sp = num + 10
+        $("#total").html(gp + ":" + sp + ":" + cp)
+
+   });
+    $(".15sp").click(function(){
+      let num = sp
+      
+    sp = num + 15
         $("#total").html(gp + ":" + sp + ":" + cp)
 
    });
@@ -107,6 +120,13 @@
      let num = cp 
     
       cp = num + 10
+       $("#total").html(gp + ":" + sp + ":" + cp)
+
+   });
+    $(".15cp").click(function(){
+     let num = cp 
+    
+      cp = num + 15
        $("#total").html(gp + ":" + sp + ":" + cp)
 
    });
