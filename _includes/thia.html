@@ -7,9 +7,9 @@
   <button id="tsword">Sword</button>
   <button id="spear">Spear</button>
   <button id="tcheck">AC Check</button>
-   <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
+   <button id="t1">-1</button>
+  <button id="t5">-5</button>
+  <button id="t10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
@@ -25,28 +25,28 @@
       let num = Math.floor(Math.random() * 20) +2
       $("#res").html(num)
     });
-    $("#1").click(function(){
+    $("#t1").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#thp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#thp").html("Garret is defeated")
     }
     });
-    $("#5").click(function(){
+    $("#t5").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#thp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#thp").html("Garret is defeated")
     }
     });
-    $("#10").click(function(){
+    $("#t10").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#thp").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Garret is defeated")
+      $("#thp").html("Garret is defeated")
     }
     });
   });
