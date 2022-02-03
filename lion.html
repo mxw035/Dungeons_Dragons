@@ -14,7 +14,7 @@ layout: local
   <ul>
     <li>Linene Graywind</li>
   </ul>
-  <p>Well hello, welcome</p>
+  <p id="words">Well hello, welcome</p>
   <button id="next">Talk</button>
 </div>
 <div class="w3-half">
@@ -48,6 +48,12 @@ layout: local
         text: "I can not thank you all enough for getting my supplies back from those pesky goblins. Do you need any armor or weapons?"
       }
     ]
+  });
+  let talkC = 0
+  $("#next").click(function(){
+    let num = talkC
+    $("#words").html(talk[num].text)
+    talkC = talkC + 1 
   });
 </script>
 {% include coinscript.html %}
