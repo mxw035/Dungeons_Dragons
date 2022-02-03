@@ -80,3 +80,32 @@ layout: local
     });
   });  
 </script>
+<script>
+  $("document").ready(function(){
+    let count = 0
+    const talk = [
+  {
+    key: 0, 
+    text: "'Halt!' The wizard call off the zombies. 'What are you all doing here'"
+  }, {
+    key: 1, 
+    text: "I think that we can find an arrangement that benifits us both or I can let my zombies tear you to shreds"
+  }, {
+    key: 2, 
+    text: "You dont need to know what I am doing here. But I would be willing to help you if you can do a favor for me."
+    },
+    {
+  key: 3, 
+  text: "There are orcs at Wyvern Tor. Unfortunately they have spotted me here and I would like them to be gotten rid of if you catch my drift."
+}, {
+  key: 4, 
+  text: "I need to know who built this tower it is very important. I know of a Banshee who holds this information. Unfortunately she has quite the temper and dislikes wizard but, if you would go and get the information for me I believe I could be of assistance"
+}
+  ];
+    $("#next").click(function(){
+      let number = count 
+      $("#talk").html(talk[number].text)
+      count = count + 1
+    });
+  });
+</script>
