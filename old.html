@@ -7,14 +7,15 @@ layout: local
   <div id="description" class="w3-half w3-teal">
     <h1>Description</h1>
     <p id="d">As you crest a low ridge, you spy the crumbing ruins of an old watchtower standing amid the rugged hills. The place is so old that the walls are only mounds of rubble enclosing a courtyard of sorts, adjacent to the broken stump of an old tower. A colorful tenet has been set up in the middle of the courtyard but no one is in sight.</p>
-    <button id="exp">Explore</button>
-    <button id="y">Accept</button>
-    <button id="n">Decline</button>
+    <button id="exp" class="w3-button w3-round w3-lime">Explore</button>
+    <button id="y" class="w3-button w3-round w3-lime">Accept</button>
+    <button id="n" class="w3-button w3-round w3-lime">Decline</button>
   </div>
   <div id="people" class="w3-half w3-amber">
     <h1>People</h1>
     <p>The Red Wizard: Hamun Kost</p>
     <p id="talk"></p>
+    <button id="next" class="w3-button w3-round w3-lime">Talk</button>
   </div>
 </div>
 <script>
@@ -42,8 +43,7 @@ layout: local
     text: "DC 10 intellegence History check"
   }
     ];
-  
-  });
+ 
   let count = 0
   $("#exp").click(function(){
     let number = count 
