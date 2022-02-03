@@ -1,0 +1,53 @@
+---
+title: Old Owl Well
+layout: local
+---
+
+<div>
+  <div id="description" class="w3-half w3-teal">
+    <h1>Description</h1>
+    <p id="d">As you crest a low ridge, you spy the crumbing ruins of an old watchtower standing amid the rugged hills. The place is so old that the walls are only mounds of rubble enclosing a courtyard of sorts, adjacent to the broken stump of an old tower. A colorful tenet has been set up in the middle of the courtyard but no one is in sight.</p>
+    <button id="exp">Explore</button>
+    <button id="y">Accept</button>
+    <button id="n">Decline</button>
+  </div>
+  <div id="people" class="w3-half w3-amber">
+    <h1>People</h1>
+    <p>The Red Wizard: Hamun Kost</p>
+    <p id="talk"></p>
+  </div>
+</div>
+<script>
+  $("document").ready(function(){
+    const explore = [
+     {
+    key: 1, 
+    text: "As you approach the tower you preform a DC 10 Perception Check"
+  }, 
+  {
+    key: 2, 
+    text: "Upon approaching the tower you notice a tent at the base of the tower and all of a sudden you hear a clammoring of creatures and 12 zobmies pour out of the tower."
+  }, 
+  {
+  key: 3, 
+  text:"What do you do?"
+  }, {
+    key: 4, 
+  text: "As the battle erupts a man comes out. He appears from the door of the tent to be a mage and not the helpful kind. 'What is the meaning of all this noise!?' He is wearing a red hood and has a shaved head with a black tatoo on his forhead."
+  },{
+    key: 5, 
+    text: "DC 10 intellegence Arcana check"
+  }, {
+    key: 6, 
+    text: "DC 10 intellegence History check"
+  }
+    ];
+  
+  });
+  let count = 0
+  $("#explore").click(function(){
+    let number = count 
+    $("#d").html(explore[number].text)
+    count = count + 1
+  });
+</script>
