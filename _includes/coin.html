@@ -1,0 +1,17 @@
+<div class="w3-half">
+    <h1>Coin Exchange</h1>
+    <p id="coins"></p>
+    <button id="gold">Gold</button>
+    <button id="silver">Silver</button>
+    <button id="copper">Copper</button>
+  </div>
+<script>
+  $("document").ready(function(){
+    $("#gold").click(function(){
+      $("#coins").html("10 sp")
+    });//end of gold
+    $("#silver").click(function(){
+      $("#coins").html("10 cp")
+    });//end of silver
+  });
+</script>
