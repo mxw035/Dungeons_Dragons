@@ -46,8 +46,8 @@ layout: local
         amt = amt - 1
         hp = 22
       }
-      $("#amt").html(amt)
-      $("#hp").html(hp)
+      $("#amt").html("Zombies" + amt)
+      $("#hp").html("HP" + hp)
     });
     $("#10").click(function(){
       let number = hp 
@@ -56,8 +56,8 @@ layout: local
         amt = amt - 1
         hp = 22
       }
-      $("#amt").html(amt)
-      $("#hp").html(hp)
+      $("#amt").html("Zombies" + amt)
+      $("#hp").html("HP" + hp)
     });
     if(amt <= 0){
       $("#amt").html("Battle Complete. The Red Wizard ran away during the battle leaving behind a comfortable traveling suite, with cot, chair, writting desk, supllies and chest of clothes. 35 sp, 20 ep, 20gp, 5pp, one pearl(100gp), a potion of healing, a scroll of darkness, tiny jewelled box (25gp), with a ring of protection from ancient Netheril. And 800xp.")
