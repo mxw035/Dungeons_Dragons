@@ -1,4 +1,5 @@
 <div class="w3-third w3-teal"> 
+  <p id="gres"></p>
   <h1>Garrett</h1>
   <h2 id="ghp">Hp: 14</h2>
   <h2>AC: 14</h2>
@@ -16,15 +17,15 @@
     let hp = 14
     $("#sword").click(function(){
       let num = Math.floor(Math.random() * 6) + 8
-      $("#res").html(num)
+      $("#gres").html(num)
     });
     $("#bow").click(function(){
       let num = Math.floor(Math.random() * 6) + 8 
-      $("#res").html(num)
+      $("#gres").html(num)
     });
     $("#check").click(function(){
       let num = Math.floor(Math.random() * 20) +3
-      $("#res").html(num)
+      $("#gres").html(num)
     });
     $("#g1").click(function(){
       let num = 1 
