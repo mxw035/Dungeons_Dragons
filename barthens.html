@@ -1,0 +1,24 @@
+---
+title: Barthen's Provisions
+layout: local
+---
+{% inlcude shop.html %}
+<div>
+  <h2>People</h2>
+  <p>Elmar Barthen</p>
+  <button id="talk">Talk</button>
+  <p id="words"></p>
+</div>
+<script>
+  $("document").ready(function(){
+    const talk = [
+      {
+      key: 0, 
+        text:"Well hello! Thank you agian for bringing back my supplies and taking out the Redbrands. How can I help you? Do you need to buy anything or help finding a quest?"
+      }
+    ];
+    $("#talk").click(function(){
+      $("#words").html(talk[0].text)
+    });
+  });//end of document ready 
+</script>
