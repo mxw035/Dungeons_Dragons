@@ -6,6 +6,40 @@ layout: local
 {% include dice.html %}
 
 <div id="zombie" class="w3-half w3-orange">
+  <h1>{{page.title}}</h1>
+  <hr>
   <h1>Zombie</h1>
-  
+  <h3 id="amt"></h3>
+  <h2 id="hp">HP: 22 </h2>
+  <h2>AC: 8 </h2>
+  <h2>Speed 20 </h2>
+  <h2>STR 13</h2>
+  <h2>PER 8 </h2>
+  <h2>Slam: 5ft, 1d6+1 (4)</h2>
+  <h2>XP 50 </h2>
 </div>
+<div>
+  <form>
+  <input id="hit" type="number" placeholder="hit"></input>
+  <input type="submit">Submit</input>
+  </form> 
+<script>
+  $("document").ready(function(){
+    let amt = 12
+    $("#amt").html(amt)
+    let hp = 22
+    $("#hp").html(hp)
+    $("#hit").click(function(event){
+      let number = event.target.value 
+      let num = hp 
+      hp = num - number 
+      if(hp <= 0){
+        hp = 22
+        amt = amt - 1
+        if(amt =< 0){
+          $("#amt").html("Battle Completed! Red Wizard ran away. The party gains a comfortable traveling suite, cot, cahir, writting desk, suplies, and a chest of clothes. Along with 35sp, 20 ep, 20gp, and 5pp. Also one peral worth 100 gp, a potion of healing, a scroll of darkness, a tiny jewled box(25gp), with a ring of protection from the anceient Netheril.")
+        }//end of if win
+      }//end of if hit 
+    });
+  });
+</script>
