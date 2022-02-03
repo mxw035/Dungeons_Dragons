@@ -4,45 +4,45 @@
   <hr>
   <div id="buy" class="w3-half">
     <p id="total"></p>
-  <button id="gp" value=1 name="Arrows 1gp">Arrows 1gp</button>
-  <button id="gp" value=1>Crossbow bolts 1gp</button>
-  <button id="gp" value=2>Backpack 2gp</button>
-  <button id="gp" value=1>Bedroll 1gp</button>
-  <button id="gp" value=1{>Bell 1gp</button>
-  <button id="sp" value=5>Blanket 5sp</button>
-  <button id="gp" value=25>Book 25gp</button>
-  <button id="cp" value=1>Candle 1cp</button>
-  <button id="gp" value=1>Case 1gp</button>
-  <button id="gp" value=8>Carpenters Tools 8gp</button>
-  <button id="cp" value=1>Chalk 1cp</button>
-  <button id="gp" value=5>Chest 5gp</button>
-  <button id="sp" value=5>Common Clothes 5sp</button>
-  <button id="gp" value=2>Corwbar 2gp</button>
-  <button id="gp" value=2>Grappling hook 2gp</button>
-  <button id="gp" value=1>Hammer 1gp</button>
-  <button id="gp" value=5>Healing Kit 5gp</button>
-  <button id="gp" value=5>Holy Symbol 5gp</button>
-  <button id="gp" value=25>Hour Glass 25gp</button>
-  <button id="gp" value=10>Ink 10gp</button>
-  <button id="cp" value=2>Ink pen 2cp</button>
-  <button id="sp" value=1>Parchment 1sp</button>
-  <button id="gp" value=10>Latern Bullseye 10gp</button>
-  <button id="gp" value=5>Latern hooded 5gp</button>
-  <button id="gp" value=10>Lock 10gp</button>
-  <button id="gp" value=10>Mason's tools 10gp</button>
-  <button id="sp" value=1>Oil 1sp</button>
-  <button id="gp" value=2>Pick, miners 2gp</button>
-  <button id="cp" value=5>Piton 5cp</button>
-  <button id="gp" value=2>Pot iron 2gp</button>
-  <button id="sp" value=5>Rations 1day 5sp</button>
-  <button id="gp" value=1>Rope Hempen 50 ft 1gp</button>
-  <button id="gp" value=10>Rope Silk 50ft  10gp</button>
-  <button id="gp" value=2>Shovel 2gp</button>
-  <button id="gp" value=1>Spike Iron 1gp</button>
-  <button id="gp" value=25>Theives Tools 25gp</button>
-  <button id="sp" value=5>Tinderbox 5sp</button>
-  <button id="cp" value=1>Torch 1cp</button>
-  <button id="sp" value=2>Water Skin 2sp</button>
+  <button id="1gp" value=1 name="Arrows 1gp">Arrows 1gp</button>
+  <button id="1gp" value=1>Crossbow bolts 1gp</button>
+  <button id="2gp" value=2>Backpack 2gp</button>
+  <button id="1gp" value=1>Bedroll 1gp</button>
+  <button id="1gp" value=1>Bell 1gp</button>
+  <button id="5sp" value=5>Blanket 5sp</button>
+  <button id="25gp" value=25>Book 25gp</button>
+  <button id="1cp" value=1>Candle 1cp</button>
+  <button id="1gp" value=1>Case 1gp</button>
+  <button id="8gp" value=8>Carpenters Tools 8gp</button>
+  <button id="1cp" value=1>Chalk 1cp</button>
+  <button id="5gp" value=5>Chest 5gp</button>
+  <button id="5sp" value=5>Common Clothes 5sp</button>
+  <button id="2gp" value=2>Corwbar 2gp</button>
+  <button id="2gp" value=2>Grappling hook 2gp</button>
+  <button id="1gp" value=1>Hammer 1gp</button>
+  <button id="5gp" value=5>Healing Kit 5gp</button>
+  <button id="5gp" value=5>Holy Symbol 5gp</button>
+  <button id="25gp" value=25>Hour Glass 25gp</button>
+  <button id="10gp" value=10>Ink 10gp</button>
+  <button id="2cp" value=2>Ink pen 2cp</button>
+  <button id="1sp" value=1>Parchment 1sp</button>
+  <button id="10gp" value=10>Latern Bullseye 10gp</button>
+  <button id="5gp" value=5>Latern hooded 5gp</button>
+  <button id="10gp" value=10>Lock 10gp</button>
+  <button id="10gp" value=10>Mason's tools 10gp</button>
+  <button id="1sp" value=1>Oil 1sp</button>
+  <button id="2gp" value=2>Pick, miners 2gp</button>
+  <button id="5cp" value=5>Piton 5cp</button>
+  <button id="2gp" value=2>Pot iron 2gp</button>
+  <button id="5sp" value=5>Rations 1day 5sp</button>
+  <button id="1gp" value=1>Rope Hempen 50 ft 1gp</button>
+  <button id="10gp" value=10>Rope Silk 50ft  10gp</button>
+  <button id="2gp" value=2>Shovel 2gp</button>
+  <button id="1gp" value=1>Spike Iron 1gp</button>
+  <button id="25gp" value=25>Theives Tools 25gp</button>
+  <button id="5sp" value=5>Tinderbox 5sp</button>
+  <button id="1cp" value=1>Torch 1cp</button>
+  <button id="2sp" value=2>Water Skin 2sp</button>
   </div>
   <div class="w3-half">
     <h1>Coin Exchange</h1>
@@ -57,21 +57,78 @@
     let gp = 0
     let sp = 0
     let cp = 0
-    $("#gp").click(function(event){
-      let number = parseInt(event.target.value)
-      gp = gp + number
-      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
-    });//end of gp 
-    $("#sp").click(function(event){
-      let number = parseInt(event.target.value)
-      sp = sp + number 
-      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
-    });//end of sp 
-    $("#cp").click(function(event){
-      let number = parseInt(event.target.value)
-      cp = cp + number 
-      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
-    });//end of cp 
+   $("#1gp").click(function(){
+    gp = gp + 1
+    $("#total").html(gp + sp + cp)
+   });
+    $("#2gp").click(function(){
+      gp = gp + 2
+    $("#total").html(gp + sp + cp)
+    });
+    $("#5gp").click(function(){
+    gp = gp + 5
+    $("#total").html(gp + sp + cp)
+   });
+    $("#8gp").click(function(){
+    gp = gp + 8
+    $("#total").html(gp + sp + cp)
+   });
+    $("#10gp").click(function(){
+    gp = gp + 10
+    $("#total").html(gp + sp + cp)
+   });
+    $("#25gp").click(function(){
+    gp = gp + 25
+    $("#total").html(gp + sp + cp)
+   });
+    $("#1sp").click(function(){
+    sp = sp + 1
+    $("#total").html(gp + sp + cp)
+   });
+    $("#2sp").click(function(){
+      sp = sp + 2
+    $("#total").html(gp + sp + cp)
+    });
+    $("#5sp").click(function(){
+    sp = sp + 5
+    $("#total").html(gp + sp + cp)
+   });
+    $("#8sp").click(function(){
+    sp = sp + 8
+    $("#total").html(gp + sp + cp)
+   });
+    $("#10sp").click(function(){
+    sp = sp + 10
+    $("#total").html(gp + sp + cp)
+   });
+    $("#25sp").click(function(){
+    sp = sp + 25
+    $("#total").html(gp + sp + cp)
+   });
+    $("#1cp").click(function(){
+    cp = cp + 1
+    $("#total").html(gp + sp + cp)
+   });
+    $("#2cp").click(function(){
+      cp = cp + 2
+    $("#total").html(gp + sp + cp)
+    });
+    $("#5cp").click(function(){
+    cp = cp + 5
+    $("#total").html(gp + sp + cp)
+   });
+    $("#8cp").click(function(){
+    cp = cp + 8
+    $("#total").html(gp + sp + cp)
+   });
+    $("#10cp").click(function(){
+    cp = cp + 10
+    $("#total").html(gp + sp + cp)
+   });
+    $("#25cp").click(function(){
+    cp = cp + 25
+    $("#total").html(gp + sp + cp)
+   });
     $("#gold").click(function(){
       $("#coins").html("10 sp")
     });//end of gold
