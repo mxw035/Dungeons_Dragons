@@ -1,4 +1,5 @@
 <div class="w3-third w3-teal"> 
+  <p id="kres"></p>
   <h1>Kildrak</h1>
   <h2 id="khp">Hp: 16</h2>
   <h2>AC: 18</h2>
@@ -15,15 +16,15 @@
   $("document").ready(function(){
     $("#ham").click(function(){
       let num = Math.floor(Math.random() * 8) + 6
-      $("#res").html(num)
+      $("#kres").html(num)
     });
     $("#axe").click(function(){
       let num = Math.floor(Math.random() * 6) + 6 
-      $("#res").html(num)
+      $("#kres").html(num)
     });
     $("#kcheck").click(function(){
       let num = Math.floor(Math.random() * 20) -1
-      $("#res").html(num)
+      $("#kres").html(num)
     });
     let hp = 16
     $("#k1").click(function(){
