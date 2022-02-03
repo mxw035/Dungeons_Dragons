@@ -33,7 +33,7 @@
       let days = 0 
       $("#ac").click(function(){
          action = action - 1
-         miles = miles + 2.4
+         miles = Math.round(miles + 2.4)
          if(action <= 0){
             days = days + 1
             action = 10
