@@ -2,16 +2,13 @@
 title: Old Owl Well
 layout: local
 ---
-
+<div>
 <h1>Old Owl Well</h1>
 <div class="w3-third w3-teal">
 <h2>Description</h2>
 <p>As you crest a low ridge, you spy the crumbing ruins of an old watchtower standing amid the rugged hills. The place is so old that the walls are only mounds of rubble enclosing a courtyard of sorts, adjacent to the broken stump of an old tower. A colorful tenet has been set up in the middle of the courtyard but no one is in sight.</p>
 <p>What do you do</p>
 <p id="a"></p>
-<ul>
-<li></li>
-</ul>
 </div>
 <div class="w3-third w3-amber">
 <h2>People</h2>
@@ -27,9 +24,7 @@ layout: local
 <button id="look">Explore</button>
 <button id="yes">Accept</button>
 <button id="no">Decline</button>
-<ul>
-<li></li>
-</ul>
+</div>
 </div>
 <script>
 $("document").ready(function(){
@@ -64,6 +59,7 @@ $("document").ready(function(){
     $("#exp").html(expl[number].text)
    expCount = expCount + 1
     });
+});
 </script>
 <script>
   $('document').ready(function(){
@@ -78,13 +74,13 @@ $("document").ready(function(){
   }, {
     "You notice the red cloak he is wearing and remeber that it is the usual clothing for Thay. Thay is a land located to the east of here where wizards commonly have tattoos. They represent the wizards school and this tatoo is from necromancy."
   }
-  ]
+  ];
   
     let number = dcCount
     $("#exp").html(above[number])
     dcCount = dcCount + 1
   });
-  const below = "You notice nothing strange about the tower and continue to explore."
+  const below = "You notice nothing strange and continue to explore."
   $("#no").click(function(){
     $("#exp").html(below)
     dcCount = dcCount + 1
