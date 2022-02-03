@@ -52,3 +52,22 @@ layout: local
   });
   });
 </script>
+<script>
+  $("document").ready(function(){
+    let count = 0 
+     const above = [
+  {
+    "The wind shifts and you all of assuden smell the dealthly odor of rotten fleash. It is coming from the entrance into the tower"
+  }, {
+    "You recognize the tattoo on his forhead. It is the necromantic symbol"
+  }, {
+    "You notice the red cloak he is wearing and remeber that it is the usual clothing for Thay. Thay is a land located to the east of here where wizards commonly have tattoos. They represent the wizards school and this tatoo is from necromancy."
+  }
+  ];
+    $("#y").click(function(){
+      let number = count 
+      $("#d").html(above[number])
+      count = count + 1
+    });
+  });  
+</script>
