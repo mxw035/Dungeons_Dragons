@@ -6,43 +6,43 @@
     <p id="total"></p>
   <button id="gp" value={1}>Arrows 1gp</button>
   <button id="gp" value={1}>Crossbow bolts 1gp</button>
-  <button id="gp" value="2">Backpack 2gp</button>
-  <button id="gp" value="1">Bedroll 1gp</button>
-  <button id="gp" value="1">Bell 1gp</button>
-  <button id="sp" value="5">Blanket 5sp</button>
-  <button id="gp" value="25">Book 25gp</button>
-  <button id="cp" value="1">Candle 1cp</button>
-  <button id="gp" value="1">Case 1gp</button>
-  <button id="gp" value="8">Carpenters Tools 8gp</button>
-  <button id="cp" value="1">Chalk 1cp</button>
-  <button id="gp" value="5">Chest 5gp</button>
-  <button id="sp" value="5">Common Clothes 5sp</button>
-  <button id="gp" value="2">Corwbar 2gp</button>
-  <button id="gp" value="2">Grappling hook 2gp</button>
-  <button id="gp" value="1">Hammer 1gp</button>
-  <button id="gp" value="5">Healing Kit 5gp</button>
-  <button id="gp" value="5">Holy Symbol 5gp</button>
-  <button id="gp" value="25">Hour Glass 25gp</button>
-  <button id="gp" value="10">Ink 10gp</button>
-  <button id="cp" value="2">Ink pen 2cp</button>
-  <button id="sp" value="1">Parchment 1sp</button>
-  <button id="gp" value="10">Latern Bullseye 10gp</button>
-  <button id="gp" value="5">Latern hooded 5gp</button>
-  <button id="gp" value="10">Lock 10gp</button>
-  <button id="gp" value="10">Mason's tools 10gp</button>
-  <button id="sp" value="1">Oil 1sp</button>
-  <button id="gp" value="2">Pick, miners 2gp</button>
-  <button id="cp" value="5">Piton 5cp</button>
-  <button id="gp" value="2">Pot iron 2gp</button>
-  <button id="sp" value="5">Rations 1day 5sp</button>
-  <button id="gp" value="1">Rope Hempen 50 ft 1gp</button>
-  <button id="gp" value="10">Rope Silk 50ft  10gp</button>
-  <button id="gp" value="2">Shovel 2gp</button>
-  <button id="gp" value="1">Spike Iron 1gp</button>
-  <button id="gp" value="25">Theives Tools 25gp</button>
-  <button id="sp" value="5">Tinderbox 5sp</button>
-  <button id="cp" value="1">Torch 1cp</button>
-  <button id="sp" value="2">Water Skin 2sp</button>
+  <button id="gp" value={2}>Backpack 2gp</button>
+  <button id="gp" value={1}>Bedroll 1gp</button>
+  <button id="gp" value={1}{>Bell 1gp</button>
+  <button id="sp" value={5}>Blanket 5sp</button>
+  <button id="gp" value={25}>Book 25gp</button>
+  <button id="cp" value={1}>Candle 1cp</button>
+  <button id="gp" value={1}>Case 1gp</button>
+  <button id="gp" value={8}>Carpenters Tools 8gp</button>
+  <button id="cp" value={1}>Chalk 1cp</button>
+  <button id="gp" value={5}>Chest 5gp</button>
+  <button id="sp" value={5}>Common Clothes 5sp</button>
+  <button id="gp" value={2}>Corwbar 2gp</button>
+  <button id="gp" value={2}>Grappling hook 2gp</button>
+  <button id="gp" value={1}>Hammer 1gp</button>
+  <button id="gp" value={5}>Healing Kit 5gp</button>
+  <button id="gp" value={5}>Holy Symbol 5gp</button>
+  <button id="gp" value={25]>Hour Glass 25gp</button>
+  <button id="gp" value={10}>Ink 10gp</button>
+  <button id="cp" value={2}>Ink pen 2cp</button>
+  <button id="sp" value={1}>Parchment 1sp</button>
+  <button id="gp" value={10}>Latern Bullseye 10gp</button>
+  <button id="gp" value={5}>Latern hooded 5gp</button>
+  <button id="gp" value={10}>Lock 10gp</button>
+  <button id="gp" value={10}>Mason's tools 10gp</button>
+  <button id="sp" value={1}>Oil 1sp</button>
+  <button id="gp" value={2}>Pick, miners 2gp</button>
+  <button id="cp" value={5}>Piton 5cp</button>
+  <button id="gp" value={2}>Pot iron 2gp</button>
+  <button id="sp" value={5}>Rations 1day 5sp</button>
+  <button id="gp" value={1}>Rope Hempen 50 ft 1gp</button>
+  <button id="gp" value={10}>Rope Silk 50ft  10gp</button>
+  <button id="gp" value={2}>Shovel 2gp</button>
+  <button id="gp" value={1}>Spike Iron 1gp</button>
+  <button id="gp" value={25}>Theives Tools 25gp</button>
+  <button id="sp" value={5}>Tinderbox 5sp</button>
+  <button id="cp" value={1}>Torch 1cp</button>
+  <button id="sp" value={2}>Water Skin 2sp</button>
   </div>
   <div class="w3-half">
     <h1>Coin Exchange</h1>
@@ -60,17 +60,17 @@
     $("#gp").click(function(event){
       let number = parseInt(event.target.value)
       gp = gp + number
-      $("#total").html(gp + ":" + sp + ":" + cp)
+      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
     });//end of gp 
     $("#sp").click(function(event){
       let number = parseInt(event.target.value)
       sp = sp + number 
-      $("#total").html(gp + ":" + sp + ":" + cp)
+      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
     });//end of sp 
     $("#cp").click(function(event){
       let number = parseInt(event.target.value)
       cp = cp + number 
-      $("#total").html(gp + ":" + sp + ":" + cp)
+      $("#total").html("gp:" + gp + ":" + "sp:" + sp + ":" + "cp:" + cp)
     });//end of cp 
     $("#gold").click(function(){
       $("#coins").html("10 sp")
