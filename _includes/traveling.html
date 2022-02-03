@@ -2,7 +2,17 @@
 <h2>Traveling Rules</h2>
 <p>Distance: 24 miles in 10 hours</p>
 <p>2.4 miles per hour</p>
-   {% include weather.html %}
+   <p>Each action occurs over 2.4 miles or 1 hour</p>
+   <p>Action examples</p>
+   <ul>
+      <li>hunting</li>
+      <li>battleing</li>
+      <li>Exploring or dc check</li>
+   </ul>
+ <p id="action">Actions left: 10</p>
+<p id="mile">Miles Traveled: 0</p>
+<button id="ac">Action Made</button>    
+{% include weather.html %}
 </div>
 <div class="w3-half">
 <h2>Hunting</h2>
@@ -15,4 +25,21 @@
 </div>
    
 {% include dice.html %}
-      
+<script>
+   $('document').ready(function(){
+      let action = 10 
+      let miles = 0 
+      let days = 0 
+      $("#ac").click(function(){
+         action = action - 1
+         miles = miles + 2.4
+         if(action <= 0){
+            days = days + 1
+            action = 10
+            $("#action").html("Time to make camp and rest")
+         }
+         $("#action").html("Actions Left:" + action)
+         $("#mile").html("Miles: " + miles)
+      });
+   });
+</script>
