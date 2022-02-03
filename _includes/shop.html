@@ -58,17 +58,17 @@
     let sp = 0
     let cp = 0
     $("#gp").click(function(event){
-      let number = event.target.value
+      let number = parseInt(event.target.value)
       gp = gp + number
       $("#total").html(gp + ":" + sp + ":" + cp)
     });//end of gp 
     $("#sp").click(function(event){
-      let number = event.target.value
+      let number = parseInt(event.target.value)
       sp = sp + number 
       $("#total").html(gp + ":" + sp + ":" + cp)
     });//end of sp 
     $("#cp").click(function(event){
-      let number = event.target.value
+      let number = parseInt(event.target.value)
       cp = cp + number 
       $("#total").html(gp + ":" + sp + ":" + cp)
     });//end of cp 
