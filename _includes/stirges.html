@@ -13,9 +13,9 @@
   <h2>Atk 5 ft 1d4 +3 (5)</h2>
   <h2>XP 25 </h2>
 
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
+  <button id="1S">-1</button>
+  <button id="5S">-5</button>
+  <button id="10S">-10</button>
   <button id="sh">Hide</button>
   </div> 
 </div>
@@ -23,7 +23,7 @@
   $("document").ready(function(){
     let hp = 2
     let amt = 1 
-    $("#1").click(function(){
+    $("#1S").click(function(){
       let num = 1 
       hp = hp - num 
       $("#hpS").html("HP " + hp)
@@ -37,7 +37,7 @@
         }
     }
     });
-    $("#5").click(function(){
+    $("#5S").click(function(){
       let num = 5 
       hp = hp - num 
       $("#hpS").html("HP " + hp)
@@ -51,7 +51,7 @@
         }
     }
     });
-    $("#10").click(function(){
+    $("#10S").click(function(){
       let num = 10 
       hp = hp - num 
       $("#hpS").html("HP " + hp)
