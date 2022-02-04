@@ -3,6 +3,7 @@ title: Fight Test Page
 layout: battle
 ---
 <h1 class="w3-amber w3-round">{{page.title}}</h1>
+<button id="new">New Battle</button>
 <nav>
   <button class="mons" onclick="w3.show('#stirge')">Stirges</button>
   <button id="1" class="mons">Ghouls</button>
@@ -56,6 +57,8 @@ layout: battle
       let mon = monsters[num].name
       $("#picked").html(mon)
     });//end of dice fxn 
-    
+    $("#new").click(function(){
+      $(".battle").toggle();
+    })
   });//end of ready fxn 
 </script>
