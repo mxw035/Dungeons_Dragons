@@ -1,6 +1,9 @@
 <button id="ss">Stirge</button>
 <div class="w3-half s" > 
   <h1>Stirge</h1>
+  <p id="amtS">Amount: 1</p>
+  <button id="upS">Up</button>
+  <button id="downS">Down</button>
   <h2 id="hp">HP: 2 </h2>
   <h2>AC: 14 </h2>
   <h2>Speed 10, 40 fly</h2>
@@ -19,6 +22,7 @@
 <script>
   $("document").ready(function(){
     let hp = 2
+    let amt = 1 
     $("#1").click(function(){
       let num = 1 
       hp = hp - num 
@@ -48,6 +52,14 @@
     });
     $("#ss").click(function(){
       $(".s").show();
+    });
+    $("#upS").click(function(){
+      amt = amt + 1
+      $("#amtS").html("Amount: " + amt)
+    });
+    $("#downS").click(function(){
+      amt = amt - 1
+      $("#amtS").html("Amount: " + amt)
     });
   });
 </script>
