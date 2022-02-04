@@ -1,0 +1,45 @@
+
+<div class="w3-half"> 
+  <h1>Wolf</h1>
+  <h2 id="hp">HP: 11 </h2>
+  <h2>AC: 13 </h2>
+  <h2>Speed 40</h2>
+  <h2>STR 12</h2>
+  <h2>PER 13 </h2>
+  <h2>Atk Bite: 5 ft 2d4 +2 (7) w/ DC 11 check or thrown to prone</h2>
+  <h2>XP 25 </h2>
+</div>
+<div class "w3-half">
+  <button id="1">-1</button>
+  <button id="5">-5</button>
+  <button id="10">-10</button>
+</div>
+<script>
+  $("document").ready(function(){
+    let hp = 11
+    $("#1").click(function(){
+      let num = 1 
+      hp = hp - num 
+      $("#hp").html("HP " + hp)
+      if(hp <= 0){
+      $("#hp").html("Defeated")
+    }
+    });
+    $("#5").click(function(){
+      let num = 5 
+      hp = hp - num 
+      $("#hp").html("HP " + hp)
+      if(hp <= 0){
+      $("#hp").html("Defeated")
+    }
+    });
+    $("#10").click(function(){
+      let num = 10 
+      hp = hp - num 
+      $("#hp").html("HP " + hp)
+      if(hp <= 0){
+      $("#hp").html("Defeated")
+    }
+    });
+  });
+</script>
