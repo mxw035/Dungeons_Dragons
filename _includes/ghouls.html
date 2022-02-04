@@ -26,50 +26,45 @@
     $("#1").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hpGH").html("HP " + hp)
+      $("#hpGH").html("HP: " + hp)
       if(hp <= 0){
         amt = amt - 1
-        hp = 22 
+        hp = 22
         $("#amtGH").html("Amount: " + amt)
         $("#hpGH").html("HP: " + hp)
         if(amt <= 0){
           $("#hpGH").html("Defeated")
-        }
-        
-      }
-    });
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 1
     $("#5").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hpGH").html("HP " + hp)
-       if(hp <= 0){
+       $("#hpGH").html("HP: " + hp)
+      if(hp <= 0){
         amt = amt - 1
-        hp = 22 
+        hp = 22
         $("#amtGH").html("Amount: " + amt)
         $("#hpGH").html("HP: " + hp)
         if(amt <= 0){
           $("#hpGH").html("Defeated")
-        }
-        $("#amtGH").html("Amount: " + amt)
-        $("#hpGH").html("HP: " + hp)
-      }
-    });
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 5
     $("#10").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hpGH").html("HP " + hp)
-       if(hp <= 0){
+       $("#hpGH").html("HP: " + hp)
+      if(hp <= 0){
         amt = amt - 1
-        hp = 22 
+        hp = 22
         $("#amtGH").html("Amount: " + amt)
         $("#hpGH").html("HP: " + hp)
         if(amt <= 0){
           $("#hpGH").html("Defeated")
-        }
-        $("#amtGH").html("Amount: " + amt)
-        $("#hpGH").html("HP: " + hp)
-      }
-    });
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 10 
     $("#ghH").click(function(){
       $(".gh").hide();
     });
