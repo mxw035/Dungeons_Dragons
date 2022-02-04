@@ -21,11 +21,10 @@ layout: battle
 <script>
   $("document").ready(function(){
     
-    const monster = [
+    const monsters = [
       {
         key: 0, 
-        name: "Stirge", 
-        text: {% include stirges.html%}
+        name: "Stirge"
       }, {
         key: 1, 
         name: "Ghoul"
@@ -52,13 +51,13 @@ layout: battle
     
     $("#dice").click(function(){
       let num = Math.floor(Math.random()*7)
-      let mon = monster[num].name
+      let mon = monsters[num].name
       $("#picked").html(mon)
-    });
+    });//end of dice fxn 
     $("#0").click(function(){
       let num = 0
-      let crea = monster[num].text
+      let crea = {% include stirges.html %}
       $("#monster").html(crea)
-    });
-  });
+    });//end of click 0 
+  });//end of ready fxn 
 </script>
