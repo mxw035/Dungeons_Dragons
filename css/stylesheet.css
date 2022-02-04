@@ -1,14 +1,6 @@
 ---
 ---
 body {
-  text-align: center;
-  color:white;
-}
-div{
-  background-color:purple;
-  border-width: 3px;
-  border-color: white;
-  border-radius: 16px;
-  border-style: solid;
+  text-align:center;
 }
 
