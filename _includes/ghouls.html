@@ -1,8 +1,10 @@
 
-
-<div class="w3-half gh" id="creatures"> 
+<button id="ghS">Ghoul</button>
+<div class="w3-half gh" > 
   <h1>Ghoul</h1>
-  <h2 id="hp">HP: 22 </h2>
+  <h2 id="hpGH">HP: 22 </h2>
+  <button id="upGH">Up</button>
+  <button id="downGH">Down</button>
   <h2>AC: 12 </h2>
   <h2>Speed 30</h2>
   <h2>STR 13</h2>
@@ -20,32 +22,62 @@
 <script>
   $("document").ready(function(){
     let hp = 22
+    let amt
     $("#1").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpGH").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 22 
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+      }
     });
     $("#5").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
-      if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+      $("#hpGH").html("HP " + hp)
+       if(hp <= 0){
+        amt = amt - 1
+        hp = 22 
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+      }
     });
     $("#10").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
-      if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+      $("#hpGH").html("HP " + hp)
+       if(hp <= 0){
+        amt = amt - 1
+        hp = 22 
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+      }
     });
     $("#ghH").click(function(){
-      $(".ghH").hide();
+      $(".gh").hide();
+    });
+    $("#ghS").click(function(){
+      $(".gh").show()
+    });
+    $("#upGH").click(function(){
+      amt = amt + 1
+      $("#amtGH").html("Amount: "+ amt)
+    });
+    $("#downGH").click(function(){
+      amt = amt - 1
+      $("#amtGH").html("Amount: " + amt)
     });
   });
 </script>
