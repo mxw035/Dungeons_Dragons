@@ -4,7 +4,7 @@
   <p id="amtS">Amount: 1</p>
   <button id="upS">Up</button>
   <button id="downS">Down</button>
-  <h2 id="hp">HP: 2 </h2>
+  <h2 id="hpS">HP: 2 </h2>
   <h2>AC: 14 </h2>
   <h2>Speed 10, 40 fly</h2>
   <h2>STR 4</h2>
@@ -26,25 +26,37 @@
     $("#1").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpS").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
+        amt = amt - 1
+        hp = 2
+        if(amt <= 0){
+          $("#hpS").html("Defeated")
+        }
     }
     });
     $("#5").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpS").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
+        amt = amt - 1
+        hp = 2
+        if(amt <= 0){
+          $("#hpS").html("Defeated")
+        }
     }
     });
     $("#10").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpS").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
+        amt = amt - 1
+        hp = 2
+        if(amt <= 0){
+          $("#hpS").html("Defeated")
+        }
     }
     });
     $("#sh").click(function(){
