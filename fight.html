@@ -4,25 +4,25 @@ layout: battle
 ---
 <h1 class="w3-amber w3-round">{{page.title}}</h1>
 <nav>
-  <button id="0" onclick="w3.show('#stirge')">Stirges</button>
-  <button id="1">Ghouls</button>
-  <button id="2">Ogre</button>
-  <button id="3">Goblins</button>
-  <button id="4">HobGoblins</button>
-  <button id="5">Orcs</button>
-  <button id="6">Wolves</button>
-  <button id="7">OwlBear</button>
+  <button class="mons" onclick="w3.show('#stirge')">Stirges</button>
+  <button id="1" class="mons">Ghouls</button>
+  <button id="2" class="mons">Ogre</button>
+  <button id="3" class="mons">Goblins</button>
+  <button id="4" class="mons">HobGoblins</button>
+  <button id="5" class="mons">Orcs</button>
+  <button id="6" class="mons">Wolves</button>
+  <button id="7" class="mons">OwlBear</button>
 </nav>
 <div>
   <p id="picked"></p>
   <button id="dice">Roll</button>
-  <div id="stirge">
+  <div id="stirge" class="battle">
     {% include stirges.html %}
   </div>
 </div>
 <script>
   $("document").ready(function(){
-    
+    w3.hide('div')
     const monsters = [
       {
         key: 0, 
