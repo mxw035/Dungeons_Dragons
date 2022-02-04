@@ -13,6 +13,7 @@
   <button id="1">-1</button>
   <button id="5">-5</button>
   <button id="10">-10</button>
+  <button id="hide">Hide</button>
 </div>
 <script>
   $("document").ready(function(){
@@ -40,6 +41,9 @@
       if(hp <= 0){
       $("#hp").html("Defeated")
     }
+    });
+    $("#hide").click(function(){
+      $("div").hide();
     });
   });
 </script>
