@@ -1,5 +1,5 @@
-
-<div class="w3-half s" id="creatures"> 
+<button id="ss">Stirge</button>
+<div class="w3-half s" > 
   <h1>Stirge</h1>
   <h2 id="hp">HP: 2 </h2>
   <h2>AC: 14 </h2>
@@ -9,11 +9,12 @@
   <h2>Atk 5 ft 1d4 +3 (5)</h2>
   <h2>XP 25 </h2>
 </div>
-<div class="w3-half s" id="creatures">
+<div class="w3-half s" >
   <button id="1">-1</button>
   <button id="5">-5</button>
   <button id="10">-10</button>
-  <button id="hide">Hide</button>
+  <button id="sh">Hide</button>
+  
 </div>
 <script>
   $("document").ready(function(){
@@ -42,8 +43,11 @@
       $("#hp").html("Defeated")
     }
     });
-    $("#hide").click(function(){
+    $("#sh").click(function(){
       $(".s").hide();
+    });
+    $("#ss").click(function(){
+      $(".s").show();
     });
   });
 </script>
