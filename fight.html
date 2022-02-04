@@ -15,11 +15,12 @@ layout: battle
 </nav>
 <div>
   <p id="picked"></p>
+  <button id="dice">Roll</button>
   <div id="monster"></div>
 </div>
 <script>
   $("document").ready(function(){
-    let num = Math.floor(Math.random()*7)
+    
     const monster = [
       {
         key: 0, 
@@ -47,7 +48,11 @@ layout: battle
         name: "Owlbear"
       }
     ];
-    let mon = monster[num].name
-    $("#picked").html(mon)
+    
+    $("#dice").click(function(){
+      let num = Math.floor(Math.random()*7)
+      let mon = monster[num].name
+      $("#picked").html(mon)
+    });
   });
 </script>
