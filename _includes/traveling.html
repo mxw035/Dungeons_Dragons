@@ -1,24 +1,35 @@
-<div>
+<div class="w3-half">
 <h2>Traveling Rules</h2>
 <p>Distance: 24 miles in 10 hours</p>
-<p>2.4 miles per hour</p>
+   <p>6 hours for meals and camp set up tear down</p>
+   <p>8 hours for full rest</p>
+   <p>Short rest 1 hour with HP rolls up to the max hp</p>
+   <p>2.4 miles per hour</p>
    <p>Each action occurs over 2.4 miles or 1 hour</p>
-   <p>Action examples</p>
-   <ul>
-      <li>hunting</li>
-      <li>battleing</li>
-      <li>Exploring or dc check</li>
-   </ul>
-   <p id ="night"></p>
- <p id="action">Actions left: 10</p>
-<p id="mile">Miles Traveled: 0</p>
-<button id="ac">Action Made</button>    
+   <p id="dayH">Day hours left: 10</p>
+   <p id="nightH">Night hours left: 8</p>
+  
+   <p id="mile">Miles Traveled: 0</p>
+   <p id="time">Day Time</p>
+   <button id="dt">Day Travel</button>    
+   <button id="nt">Night Time</button>
+  
+   
 {% include weather.html %}
 </div>
 <div class="w3-half">
 <h2>Hunting</h2>
-  <p>Roll D20</p>
+  <p id="20">Roll D20</p>
   <p>If > 15 then hunt</p>
+   <button id="roll">Roll</button>
+   <script>
+      $('document').ready(function(){
+         $("#roll").click(function(){
+            let num = Math.floor(Math.random()*20)
+            $("#20").html("D20 = " + num)
+         });//end of roll
+      });//end of document ready
+   </script>
 </div>
 <div>
    <h2>Monsters</h2>
@@ -28,19 +39,36 @@
 {% include dice.html %}
 <script>
    $('document').ready(function(){
-      let action = 10 
+      let dayH = 10 
+      let campH = 6
+      let nightH = 8
       let miles = 0 
       let days = 0 
-      $("#ac").click(function(){
-         action = action - 1
-         miles = Math.round(miles + 2.4)
-         if(action <= 0){
+      
+      $("#dt").click(function(){
+         let miles = dayH
+         dayH = dayH - 1
+         miles = Math.round(miles + 2.5)
+         let number = Math.floor(Math.random()*20)
+         if(dayH <= 0){
             days = days + 1
-            action = 10
-            $("#night").html("Time to make camp and rest. Watches? Battles?")
+            dayH = 10
+            $("#time").html("Time to make camp and rest. Watches? Battles?")
          }
-         $("#action").html("Actions Left:" + action)
+         $("#dayH").html("Day Hours Left" + dayH)
          $("#mile").html("Miles: " + miles)
-      });
+         $("#time").html("Day time: " + number)
+      });//end of dt click 
+      $("#nt").click(function(){
+         nightH = nightH - 1
+         let number = Math.floor(Math.random()*20)
+         if(nightH <= 0){
+            nightH = 8
+            $("#time").html("Day Time")
+         }
+         $("#nightH").html("Night Hours Left" + nightH)
+         $("#time").html("Night Time: " + number)
+      });//end of nt button click
+      
    });
 </script>
