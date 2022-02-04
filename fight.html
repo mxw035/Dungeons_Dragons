@@ -13,3 +13,41 @@ layout: battle
   <button id="6">Wolves</button>
   <button id="7">OwlBear</button>
 </nav>
+<div>
+  <p id="picked"></p>
+  <div id="monster"></div>
+</div>
+<script>
+  $("document").ready(function(){
+    let num = Math.floor(Math.random()*7)
+    const monster = [
+      {
+        key: 0, 
+        name: "Stirge"
+      }, {
+        key: 1, 
+        name: "Ghoul"
+      }, {
+        key: 2, 
+        name: "Ogre"
+      }, {
+        key: 3, 
+        name: "Goblin"
+      }, {
+        key: 4, 
+        name: "HobGoblins"
+      }, {
+        key: 5, 
+        name: "Orcs"
+      }, {
+        key: 6, 
+        name: "Wolve"
+      }, {
+        key: 7, 
+        name: "Owlbear"
+      }
+    ];
+    let mon = monster[num].name
+    $("#picked").html(mon)
+  });
+</script>
