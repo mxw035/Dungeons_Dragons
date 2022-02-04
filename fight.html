@@ -25,7 +25,7 @@ layout: battle
       {
         key: 0, 
         name: "Stirge", 
-        text: {% include striges.html%}
+        text: {% include stirges.html%}
       }, {
         key: 1, 
         name: "Ghoul"
@@ -54,6 +54,11 @@ layout: battle
       let num = Math.floor(Math.random()*7)
       let mon = monster[num].name
       $("#picked").html(mon)
+    });
+    $("#0").click(function(){
+      let num = 0
+      let crea = monster[num].text
+      $("#monster").html(crea)
     });
   });
 </script>
