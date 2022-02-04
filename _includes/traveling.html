@@ -1,4 +1,4 @@
-<div class="w3-half">
+<div >
 <h2>Traveling Rules</h2>
 <p>Distance: 24 miles in 10 hours</p>
    <p>6 hours for meals and camp set up tear down</p>
@@ -46,7 +46,6 @@
       let days = 0 
       
       $("#dt").click(function(){
-         let miles = dayH
          dayH = dayH - 1
          miles = Math.round(miles + 2.5)
          let number = Math.floor(Math.random()*20)
@@ -55,9 +54,9 @@
             dayH = 10
             $("#time").html("Time to make camp and rest. Watches? Battles?")
          }
-         $("#dayH").html("Day Hours Left" + dayH)
+         $("#dayH").html("Day Hours Left: " + dayH)
          $("#mile").html("Miles: " + miles)
-         $("#time").html("Day time: " + number)
+         $("#time").html("Day time: d20: " + number)
       });//end of dt click 
       $("#nt").click(function(){
          nightH = nightH - 1
@@ -66,8 +65,8 @@
             nightH = 8
             $("#time").html("Day Time")
          }
-         $("#nightH").html("Night Hours Left" + nightH)
-         $("#time").html("Night Time: " + number)
+         $("#nightH").html("Night Hours Left: " + nightH)
+         $("#time").html("Night Time: d20: " + number)
       });//end of nt button click
       
    });
