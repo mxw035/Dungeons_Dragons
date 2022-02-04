@@ -4,7 +4,7 @@ layout: battle
 ---
 <h1 class="w3-amber w3-round">{{page.title}}</h1>
 <nav>
-  <button id="0">Stirges</button>
+  <button id="0" onclick="w3.show('#stirge')">Stirges</button>
   <button id="1">Ghouls</button>
   <button id="2">Ogre</button>
   <button id="3">Goblins</button>
@@ -16,7 +16,9 @@ layout: battle
 <div>
   <p id="picked"></p>
   <button id="dice">Roll</button>
-  <div id="monster"></div>
+  <div id="stirge">
+    {% include stirges.html %}
+  </div>
 </div>
 <script>
   $("document").ready(function(){
@@ -54,10 +56,6 @@ layout: battle
       let mon = monsters[num].name
       $("#picked").html(mon)
     });//end of dice fxn 
-    $("#0").click(function(){
-      let num = 0
-      let crea = {% include stirges.html %}
-      $("#monster").html(crea)
-    });//end of click 0 
+    
   });//end of ready fxn 
 </script>
