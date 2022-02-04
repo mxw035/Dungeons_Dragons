@@ -14,16 +14,16 @@
   <h2>Claws: 5ft, 2d4+2 (7) must also roll DC10 or be paralyzed</h2>
   <h2>XP 200 </h2>
 
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
+  <button id="1GH">-1</button>
+  <button id="5GH">-5</button>
+  <button id="10GH">-10</button>
   <button id="ghH">Hide</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 22
     let amt = 1
-    $("#1").click(function(){
+    $("#1GH").click(function(){
       let num = 1 
       hp = hp - num 
       $("#hpGH").html("HP: " + hp)
@@ -37,7 +37,7 @@
         }//end of if amt 0 
       }//end of if hp 0 
     });//end of click 1
-    $("#5").click(function(){
+    $("#5GH").click(function(){
       let num = 5 
       hp = hp - num 
        $("#hpGH").html("HP: " + hp)
@@ -51,7 +51,7 @@
         }//end of if amt 0 
       }//end of if hp 0 
     });//end of click 5
-    $("#10").click(function(){
+    $("#10GH").click(function(){
       let num = 10 
       hp = hp - num 
        $("#hpGH").html("HP: " + hp)
