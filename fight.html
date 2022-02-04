@@ -4,16 +4,7 @@ layout: battle
 ---
 <h1 class="w3-amber w3-round">{{page.title}}</h1>
 
-<nav>
-  <button class="mons" >Stirges</button>
-  <button  class="mons">Ghouls</button>
-  <button  class="mons">Ogre</button>
-  <button  class="mons">Goblins</button>
-  <button  class="mons">HobGoblins</button>
-  <button  class="mons">Orcs</button>
-  <button class="mons">Wolves</button>
-  <button  class="mons">OwlBear</button>
-</nav>
+
 <div>
   <p id="picked"></p>
   <button id="dice">Roll</button>
@@ -23,7 +14,6 @@ layout: battle
   </div>
 <script>
   $("document").ready(function(){
-    w3.hide('div')
     const monsters = [
       {
         key: 0, 
