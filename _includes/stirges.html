@@ -16,7 +16,6 @@
   <button id="1S">-1</button>
   <button id="5S">-5</button>
   <button id="10S">-10</button>
-  <button id="sh">Hide</button>
   </div> 
 </div>
 <script>
@@ -65,11 +64,8 @@
         }
     }
     });
-    $("#sh").click(function(){
-      $(".s").hide();
-    });
     $("#ss").click(function(){
-      $(".s").show();
+      $(".s").toggle();
     });
     $("#upS").click(function(){
       amt = amt + 1
