@@ -1,0 +1,99 @@
+---
+title: Orc Trouble
+layout: local
+---
+<h1>{{page.title}}</h1>
+<div class="w3-third">
+  <h1>Description</h1>
+  <p>The camp is hidden near Wyvern Tor a very sizable hill with rugged terrain</p>
+  <p id="next"></p>
+  <button id="btnNext">Next</button>
+  <button id="y">Above</button>
+  <button id="n">Below</button>
+</div>
+<div class="w3-third">
+  <h1>People</h1>
+</div>
+<div class="w3-third">
+  <h1>Battle</h1>
+  <h3>Brughor's Band</h3>
+  <p>Brughor Axe-Bitter Orc with 30hp</p>
+  <p>Gog the Ogre</p>
+  <p>6 ordinary orcs</p>
+  {% include orcs.html %}
+  {% include orcs.html %}
+  {% include orcs.html %}
+  {% include orcs.html %}
+  {% include orcs.html %}
+  {% include orcs.html %}
+  {% include ogre.html %}
+  {% include players.html %}
+</div>
+<script>
+  $("document").ready(function(){
+    const next = [
+      {
+        key: 0,
+        text: "DC Wisdom 15 check"
+      }, 
+      {
+        key: 1,
+        text: "DC 10 Wisdom check"
+      },{
+        key: 2, 
+        text: "The faint smell of smoke hangs on the air as you ascend a rugged ridge on the lower slopes of the hill. Fifty yards away, a cave mout opens up at the bottom of a ravine. Hunkered down by a boulder twenty yeard outsdie the cave, keeping watch, is a single orc."
+      }, 
+      {
+        key: 3, 
+        text: "DC 10 Dex Stealth Check"
+      }
+    ];
+    let countN = 0
+    let countA = 0
+    const below = [
+      {
+        key: 0,
+        text: "You notice nothing out of the ordinary and continue on your adventure"
+      }, 
+      {
+        key: 1,
+        text: "You notice nothing out of the ordinary and continue on your adventure"
+      },
+      {
+        key: 2, 
+        text: "Unfortuatley you are unable to take out the lone orc and other creatures start running out of the cave ready for battle"
+      }];
+        const above = [
+      {
+        key: 0, 
+        text:"You smell smoke coming from the South East and follow the smell and then the pillar of smoke."
+      }, 
+      {
+        key: 1, 
+        text: "You hear very faint vocies. You believe they are the voices of orcs. They appear to be coming from the South East. You follow the voices until you see a pillar of smoke"
+      }, {
+      key: 2, 
+        text:"You are able to defeat the lone orc with out arrousing suspicion" 
+      }
+    ];
+    const heard = "Unfortuatley you are unable to take out the lone orc and other creatures start running out of the cave ready for battle"
+    $("#btnNext").click(function(){
+      let num = countN 
+      let text = next[num].text
+      $("#next").html(text)
+      countN = countN + 1
+    });
+    $("#y").click(function(){
+      let num = countA
+      let text = above[num].text
+      $("#next").html(text)
+      countA = countA + 1
+    });
+    $("#n").click(function(){
+      let num = countA
+      let text = below[num].text
+      $("#next").html(text)
+      countA = countA + 1
+    });
+  });//end of doc ready
+</script>
