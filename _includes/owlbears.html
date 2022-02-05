@@ -1,7 +1,11 @@
 
 <div class="w3-half"> 
+  <div class=".owl">
   <h1>Owlbear</h1>
-  <h2 id="hp">HP: 59 </h2>
+  <h2 id="hpOWL">HP: 59 </h2>
+    <p id="amtOWL">Amount: 1</p>
+    <button id="upOWL">Up</button>
+    <button id="downOWL">Down</button>
   <h2>AC: 13 </h2>
   <h2>Speed 40 </h2>
   <h2>STR 20</h2>
@@ -9,38 +13,67 @@
   <h2>Beak: 5ft, 1d10+5 (10)</h2>
   <h2>Claws: 5ft, 2d8+5(14)</h2>
   <h2>XP 700 </h2>
+  <button id="1OWL">-1</button>
+  <button id="5OWL">-5</button>
+  <button id="10OWL">-10</button>
 </div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 59
-    $("#1").click(function(){
+    let amt = 1
+    $("#1OWL").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpOWL").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 59
+        $("#amtOWL").html("Amount: "+ amt)
+        $("#hpOWL").html("HP: "+ hp)
+        if(amt <= 0){
+          $("#hpOWL").html("Defeated");
+        }//end of amt 0 
+    }//end of hp 0 
     });
-    $("#5").click(function(){
+    $("#5OWL").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpOWL").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 59
+        $("#amtOWL").html("Amount: "+ amt)
+        $("#hpOWL").html("HP: "+ hp)
+        if(amt <= 0){
+          $("#hpOWL").html("Defeated");
+        }//end of amt 0 
+    }//end of hp 0 
     });
-    $("#10").click(function(){
+    $("#10OWL").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
-      if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
-  });
+      $("#hpOWL").html("HP " + hp)
+     if(hp <= 0){
+        amt = amt - 1
+        hp = 59
+        $("#amtOWL").html("Amount: "+ amt)
+        $("#hpOWL").html("HP: "+ hp)
+        if(amt <= 0){
+          $("#hpOWL").html("Defeated");
+        }//end of amt 0 
+    }//end of hp 0 
+    });//end of 10 
+    $("#togOWL").click(function(){
+      $(".owl").toggle();
+    });//end of tog
+    $("#upOWL").click(function(){
+      amt = amt + 1
+      $("#amtOWL").html("Amount: "+ amt)
+    });//end up 
+    $("#downOWL").click(function(){
+      amt = amt - 1
+      $("#amtOWL").html("Amount: "+ amt)
+    })//end of down
+  });//end of ready
 </script>
