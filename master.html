@@ -1,0 +1,71 @@
+---
+title: TownMaster's Hall
+layout: local
+---
+<h1>{{page.title}}</h1>
+<div class="w3-third">
+  <h2>Description</h2>
+  <ul>
+    <li>The townmasters hall has sturdy stone walls, a pitched wooden roof, and a bell tower at the back. Posted on a board next to the front door is a notice written in Common. It reads: "REWARD- Orcs near Wyvern Tor! Those of a mind to face the orc menance should inquire within." The notice bears the town's seal and an indecipherable signature</li>
+  </ul>
+</div>
+<div class="w3-third">
+  <h2>People</h2>  
+  <ul>
+    <li>Harbin Wester: the town appointed townmaster that serves as judge and keeps town records. Also keeps the keys to the 2 jail cells in the town hall</li>
+    <ul>
+    <li>A fat pmpous old fool who is completly terrified by the redbrands</li>
+    </ul>
+    <li>Sildar Hallwinter</li>
+    <ul>
+      <li>After resting and healing Sildar has become the Lords Alliance and is trying to take care of the goblin problem</li>
+    </ul>
+  </ul>
+  <button id="nextH">Talk Harbin</button>
+  <button id="nextS">Talk Sildar</button>
+  <p id="wordsH"></p>
+  <p id="wordsS"></p>
+</div>
+<div class="w3-third">
+  <h2>Quests</h2>
+  <button>Orc Trouble</button>
+  <button>Finding Cragmaw Castle</button>
+  <button>Finding Iarno (completed)</button>
+</div>
+<script>
+  const talkH = [
+    {
+      key: 0, 
+      text: "Well hello there. Can't thank you enough for taking care of the Redbrands. I honestly thought they were just a mercenary guild and that they wouldnt be any trouble but boy was I wrong."
+    }, {
+      key: 1, 
+      text: "You have all proved your selves to be brave and curagious adventors. I have a bit of a problem. I suppose you have seen the REWARD note at the front door. I really need help with this Orc problem. They are stopping all of our shipments of goods and soon the town will be in real trouble if someone dosent put a stop to it. I would go my self but I really need to stay and take care of the town. Can you help? The reward is 100gp."
+    }, {
+      key: 2, 
+      text: "If you are not ready to defeat the Orc's I know Sildar was wanting to speak to you all about some goblin problems"
+    }
+  ];
+  const talkS= [
+    {
+      key: 0, 
+      text: "Well hello. Long time no see. How are you all doing? I am sure by now you have heard that the goblins are still giving us some trouble. Rumor has it that they are hold up in what is known as Cragmaw castle. We need to find this castle and rid it of the goblin hoard. Only then do we have hope of finding the Rockseeker brothers. Maybe one of the goblins will know where they are. Will you help?"
+    }, {
+      key: 1, 
+      text: "I have heard that the castle is some where north of the triboar trail in the Neverwinter forset. Maybe if you search out raiding parties they will be able to lead you to the castle. If you can get rid of the goblins I will reward you 500gp"
+    }
+  ];
+  let countH = 0
+  let countS = 0
+  $("#nextH").click(function(){
+    let number = countH
+    let text = talkH[number].text
+    $("#wordsH").html(text)
+    countH = countH + 1
+  });
+  $("#nextS").click(function(){
+    let number = countS
+    let text = talkS[number].text
+    $("#wordsS").html(text)
+    countS = countS + 1
+    });
+</script>
