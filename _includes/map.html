@@ -37,7 +37,7 @@
   <button><a href="Phandalin.html">Phandalin</a></button>
 </div>
 <button id="mt">Minner's Trail</button>
-<div>
+<div class="mt">
   <h1>Minner's Trail</h1>
   <ul>
     <h2>Location</h2>
@@ -50,13 +50,13 @@
     $(".tt").hide();
     $(".hr").hide();
   $("#hr").click(function(){
-     $('.hr').show();
+     $('.hr').toggle();
   }); //end of hr 
     $("#tt").click(function(){
-      $('.tt').show();
+      $('.tt').toggle();
     });//end of tt
     $("#mt").click(function(){
-      $(".mt").show();
+      $(".mt").toggle();
     });
   });//end of doc ready
 </script>
