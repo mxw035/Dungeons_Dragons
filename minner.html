@@ -1,0 +1,90 @@
+---
+title: Phandalin Miners Exchange
+layout: local
+---
+<h1 class="w3-amber w3-round">{{page.title}}</h1>
+<div>
+  <h3>Description</h3>
+  <ul>
+    <li>South of the Lionsheild and woodworker on the way to the Minner's Trail is the Phandalin Minners Exchange</li>
+    <li>Here is where locals and visiting prospectors can exchange their found gold and other vaulable finds for money.</li>
+    <li>The exchange serves as more of a local and governing athuority than the townmaster. There are even rumors that Halia works for a secret guild and would like to take over Phandalin. She has become very popular amognst the locals especially those effected by the Redbrands who were written off by the Townmaster.<li>
+  </ul>
+</div>
+<div>
+  <h3>People</h3>
+  <p>Halia Thornton</p>
+  <p id="wordsH">Well hello. It is nice to finally meet you all. You are famous around here for taking out the Redbrands. I was working to take them out as well with some locals but our forces were small and things were seeming hopeless we are so happy you arrived.</p>
+  <button id="talk">Talk</button>
+</div>
+<div>
+  <h3>Quests</h3>
+  <p>Find the Goblin and get info on the leader of the RedBrands</p>
+  <button id="y">Above</button>
+  <button id="n">Below</button>
+  <button id="comp">Give Halia the info</button>
+</div>
+<div>
+  <h3>Exchange</h3>
+  
+</div>
+<script>
+  $("document").ready(function(){
+    const word = [
+      {
+        key: 0, 
+        text: "Did you come across the goblin serving the Redbrands. I heard that you are all looking for Cragmaw Castle and I wonder if this goblin would know where to find it?"
+      }, 
+      {
+        key: 1, 
+        text: "Goblins typically dont travel alone so I would check near the hide out again I bet he is still hanging around."
+      }, 
+      {
+        key: 2, 
+        text: "Also if you have the time I have a problem I could use some help with. When you defeated the Redbrands did you get a good luck at the leader and his quarters? I would appreciate learning more about him. If you go looking for the goblin take a look around for me and I will give you 100gp."
+      }, 
+      {
+        key: 3, 
+        text: "Why do I want to know about his room? DC 15 Wisdom check"
+      }
+    ];//end of word
+    const above = [
+      {
+        key: 0, 
+        text: "Well lets just say I have wanted him gone for a while now and I would like to know how he so quickly took over the town and kept the townmaster in fear."
+      }, 
+      {
+        key: 1, 
+        text:"If you agree to join she gives you the name of fang"
+      }
+    ];
+    const below = [
+      {
+        key: 0, 
+        text: "Oh no reason just curious as to what kind of person could do this to so many innocent people. The more I know the better I can protect the town."
+      }
+    ]
+    let countT = 0
+    let countA = 0
+    $("#talk").click(function(){
+      let num = countT
+      let text = word[num].text
+      $("#wordsH").html(text)
+      countT = countT + 1
+    });//end of talk
+    $("#y").click(function(){
+      let num = countA 
+      let text = above[num].text
+      $("#wordsH").html(text)
+      countA = countA + 1
+    });//end of y 
+    $("#n").click(function(){
+      let num = countA 
+      let text = below[num].text
+      countA = countA + 1
+    });//end of n 
+    $("#comp").click(function(){
+      $("#wordsH").html("Thank you all this information will be helpful in protecting the town here take this. She gives you 100 gp. Also I have a bit of a propersition for you. I work with group called Zhentarim our goal is to protect the common people through our use of wealth and power and I think that you are a good fit. You clearly have the power to protect those in need. "
+    });
+  });//end of doc ready
+</script>
