@@ -1,4 +1,4 @@
-<button onclick="w3.toggleShow('.hr)">High Road</button>
+<button id="hr">High Road</button>
 <div class="hr">
   <h1>The High Road</h1>
   <ul>
@@ -14,7 +14,7 @@
     <li>10 miles south of Leilon is the Mere of Dead Men</li>
   </ul>
 </div>
-<button onclick="w3.toggleShow('.tt')">Triboar Trail</button>
+<button id="tt">Triboar Trail</button>
 <div class="tt">
   <h1>Triboar</h1>
   <ul>
@@ -25,6 +25,7 @@
     <li>20 miles west on triboar tees into the High Road</li>
     <h2>Going East</h2>
     <li>45 miles East the triboar trail goes right through Conyberry</li>
+    <button><a href="corn.html">Cornberry</a></button>
     <h2>To the South</h2>
     <li>10 miles south Phandalin</li>
     <li>30 miles south Sword Mountains</li>
@@ -33,9 +34,9 @@
 </div>
 <div>
   <h1>Phandalin</h1>
-  <button><a href="town.html">Phandalin</a></button>
+  <button><a href="Phandalin.html">Phandalin</a></button>
 </div>
-<button onclick="w3.toggleShow('mt')">Minner's Trail</button>
+<button id="mt">Minner's Trail</button>
 <div>
   <h1>Minner's Trail</h1>
   <ul>
@@ -43,3 +44,19 @@
     <li>Exits Phandalin to the South West</li>
   </ul>
 </div>
+<script>
+  $("document").ready(function(){
+    $(".mt").hide();
+    $(".tt").hide();
+    $(".hr").hide();
+  $("#hr").click(function(){
+     $('.hr').show();
+  }); //end of hr 
+    $("#tt").click(function(){
+      $('.tt').show();
+    });//end of tt
+    $("#mt").click(function(){
+      $(".mt").show();
+    });
+  });//end of doc ready
+</script>
