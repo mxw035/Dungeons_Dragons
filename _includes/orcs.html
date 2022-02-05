@@ -1,7 +1,12 @@
 
 <div class="w3-half"> 
+  <button id="togORC">Orcs</button>
+  <div class="orc">
   <h1>Orc</h1>
-  <h2 id="hp">HP: 15 </h2>
+  <h2 id="hpORC">HP: 15 </h2>
+    <p id="amtORC">Amount: 1</p>
+    <button id="upORC">Up</button>
+    <button id="downORC">Down</button>
   <h2>AC: 13 </h2>
   <h2>Speed 30</h2>
   <h2>STR 16</h2>
@@ -9,38 +14,68 @@
   <h2>Greataxe: 5ft, 1d12+3 (9)</h2>
   <h2>Javelin: 30/120ft, 1d6+3 (6)</h2>
   <h2>XP 100 </h2>
+  <button id="1ORC">-1</button>
+  <button id="5ORC">-5</button>
+  <button id="10ORC">-10</button>
 </div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 15
-    $("#1").click(function(){
+    let amt = 1
+    $("#1ORC").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpORC").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 15
+        $("#hpORC").html("HP: "+ hp)
+        $("#amtORC").html("Amount: "+ amt)
+        if(amt <= 0){
+          $("#hpORC").html("DEFEATED")
+        }//end of amt 0
+    }//end of hp 0
     });
-    $("#5").click(function(){
+    $("#5ORC").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpORC").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 15
+        $("#hpORC").html("HP: "+ hp)
+        $("#amtORC").html("Amount: "+ amt)
+        if(amt <= 0){
+          $("#hpORC").html("DEFEATED")
+        }//end of amt 0
+    }//end of hp 0
     });
-    $("#10").click(function(){
+    $("#10ORC").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpORC").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
+        amt = amt - 1
+        hp = 15
+        $("#hpORC").html("HP: "+ hp)
+        $("#amtORC").html("Amount: "+ amt)
+        if(amt <= 0){
+          $("#hpORC").html("DEFEATED")
+        }//end of amt 0
+    }//end of hp 0
+    });//end of 10 
+    $("#togORC").click(function(){
+      $(".ORC").toggle();
+    })//end of toggle
+    $("#upORC").click(function(){
+      amt = amt + 1
+      $("#amtORC").html("Amount: " + amt)
+    });//end of up 
+    $("#downORC").click(function(){
+      amt = amt - 1
+      $("#amtORC").html("Amount: " + amt)
+    });//end down 
+    
   });
 </script>
