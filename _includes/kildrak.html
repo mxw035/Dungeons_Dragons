@@ -3,10 +3,14 @@
   <h1>Kildrak</h1>
   <h2 id="khp">Hp: 16</h2>
   <h2>AC: 18</h2>
-  <h2>STR: +2</h2>
-  <h2>Dex: -1</h3>
-  <button id="ham">WarHammer</button>
-  <button id="axe">Handaxe</button>
+  <button id="STR">STR +2</button>
+  <button id="DEX">DEX -1</button>
+  <button id="CON">CON +2</button>
+  <button id="INT">INT +0</button>
+  <button id="WIS">WIS +3</button>
+  <button id="CHAR">CHAR +1</button>
+  <button id="ham">WarHammer 1d8+2</button>
+  <button id="axe">Handaxe 1d6+2</button>
   <button id="kcheck">AC Check</button>
    <button id="k1">-1</button>
   <button id="k5">-5</button>
@@ -15,15 +19,15 @@
 <script>
   $("document").ready(function(){
     $("#ham").click(function(){
-      let num = Math.floor(Math.random() * 8) + 6
+      let num = Math.floor(Math.random() * 8) + 2
       $("#kres").html(num)
     });
     $("#axe").click(function(){
-      let num = Math.floor(Math.random() * 6) + 6 
+      let num = Math.floor(Math.random() * 6) + 2 
       $("#kres").html(num)
     });
     $("#kcheck").click(function(){
-      let num = Math.floor(Math.random() * 20) -1
+      let num = Math.floor(Math.random() * 20) +4
       $("#kres").html(num)
     });
     let hp = 16
@@ -50,6 +54,30 @@
       if(hp <= 0){
       $("#khp").html("Kildrak is defeated")
     }
+    });//end of 10 
+    $("#STR").click(function(){
+      let num = Math.floor(Math.random()*20) +2
+      $("#kres").html(num)
     });
-  });
+    $("#DEX").click(function(){
+      let num = Math.floor(Math.random()*20) -1
+      $("#kres").html(num)
+    });
+    $("#CON").click(function(){
+      let num = Math.floor(Math.random()*20) +2
+      $("#kres").html(num)
+    });
+    $("#INT").click(function(){
+      let num = Math.floor(Math.random()*20) +0
+      $("#kres").html(num)
+    });
+    $("#WIS").click(function(){
+      let num = Math.floor(Math.random()*20) +3
+      $("#kres").html(num)
+    });
+    $("CHAR").click(function(){
+      let num = Math.floor(Math.random()*20) +1
+      $("#kres").html(num)
+    });
+  });//end of doc ready
 </script>
