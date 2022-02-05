@@ -3,10 +3,14 @@
   <h1>Galanodel Thia</h1>
   <h2 id="thp">14</h2>
   <h2>AC: 12</h2>
-  <h2>STR: +0</h2>
-  <h2>Dex: + 2</h3>
-  <button id="tsword">Sword</button>
-  <button id="spear">Spear</button>
+  <button id="STR">STR +0</button>
+  <button id="DEX">DEX +2</button>
+  <button id="CON">CON +2</button>
+  <button id="INT">INT +3</button>
+  <button id="WIS">WIS +1</button>
+  <button id="CHAR">CHAR -1</button>
+  <button id="tsword">Sword 1d6+2</button>
+  <button id="spear">Spear 1d6+2</button>
   <button id="tcheck">AC Check</button>
    <button id="t1">-1</button>
   <button id="t5">-5</button>
@@ -15,15 +19,15 @@
 <script>
   $("document").ready(function(){
     $("#tsword").click(function(){
-      let num = Math.floor(Math.random() * 6) + 6
+      let num = Math.floor(Math.random() * 6) + 2
       $("#tres").html(num)
     });
     $("#spear").click(function(){
-      let num = Math.floor(Math.random() * 6) + 8 
+      let num = Math.floor(Math.random() * 6) + 2
       $("#tres").html(num)
     });
     $("#tcheck").click(function(){
-      let num = Math.floor(Math.random() * 20) +2
+      let num = Math.floor(Math.random() * 20) +4
       $("#tres").html(num)
     });
     let hp = 14
@@ -50,6 +54,30 @@
       if(hp <= 0){
       $("#thp").html("Thia is defeated")
     }
+    });//end of 10
+    $("#STR").click(function(){
+      let num = Math.floor(Math.random()*20)
+      $("#tres").html(num)
     });
-  });
+    $("#DEX").click(function(){
+      let num = Math.floor(Math.random()*20) +2
+      $("#tres").html(num)
+    });
+    $("#CON").click(function(){
+      let num = Math.floor(Math.random()*20) +2
+      $("#tres").html(num)
+    });
+    $("#INT").click(function(){
+      let num = Math.floor(Math.random()*20) +3
+      $("#tres").html(num)
+    });
+    $("#WIS").click(function(){
+      let num = Math.floor(Math.random()*20) +1
+      $("#tres").html(num)
+    });
+    $("CHAR").click(function(){
+      let num = Math.floor(Math.random()*20) -1
+      $("#tres").html(num)
+    });
+  });//end of document ready
 </script>
