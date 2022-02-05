@@ -1,7 +1,7 @@
 <div class="w3-third w3-teal"> 
   <p id="gres"></p>
   <h1>Garrett</h1>
-  {% include gcoin.html %}
+  
   <h2 id="ghp">Hp: 14</h2>
   <button id="STR">STR -1</button>
   <button id="DEX">SEX +3</button>
@@ -16,7 +16,9 @@
   <button id="g1">-1</button>
   <button id="g5">-5</button>
   <button id="g10">-10</button>
+  {% include gcoin.html %}
 </div>
+
 <script>
   $("document").ready(function(){
     let hp = 14
