@@ -30,6 +30,9 @@ layout: local
     {% include orcs.html %}
     {% include brug.html %}
     {% include ogres.html %}
+  <p>If Burghor is killed the other orcs run away but Gog the Ogre fights till the death</p>
+  <button id="comp">Won!</button>
+  <p id="win"></p>
 </div>
   <div>
     {% include players.html %}
@@ -99,6 +102,9 @@ layout: local
       let text = below[num].text
       $("#next").html(text)
       countA = countA + 1
+    });
+    $("#comp").click(function(){
+      $("#win").html("Upon defeating the band of orcs you notice a treassure chest in the cave it is unlocked and holds 750cp, 180sp, 62ep, and 30gp. Also 3 bottles of perfume worth 10gp each. A total of 12500xp and the reward upon returning to Phandalin and speaking with Harbin")
     });
   });//end of doc ready
 </script>
