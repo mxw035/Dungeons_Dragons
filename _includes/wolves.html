@@ -1,45 +1,82 @@
 
 <div class="w3-half"> 
+  <button id="togW">Wolf</button>
+  <div class="w">
   <h1>Wolf</h1>
-  <h2 id="hp">HP: 11 </h2>
+  <h2 id="hpW">HP: 11 </h2>
+    <p  id="amtW">Amount: 1</p>
+    <button id="upW">Up</button>
+    <button id="downW">Down</button>
   <h2>AC: 13 </h2>
   <h2>Speed 40</h2>
   <h2>STR 12</h2>
   <h2>PER 13 </h2>
   <h2>Atk Bite: 5 ft 2d4 +2 (7) w/ DC 11 check or thrown to prone</h2>
   <h2>XP 25 </h2>
+  <button id="1W">-1</button>
+  <button id="5W">-5</button>
+  <button id="10W">-10</button>
 </div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 11
-    $("#1").click(function(){
+    let amt = 1
+    $("#1W").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpW").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
-    $("#5").click(function(){
+        amt = amt - 1
+        hp = 11
+        $("#hpW").html("HP: "+ hp)
+        $("#amtW").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpW").html("Defeated")
+        }//end of amt
+    }//end of hp
+    });//end of 1 
+    $("#5W").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpW").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 11
+        $("#hpW").html("HP: "+ hp)
+        $("#amtW").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpW").html("Defeated")
+        }//end of amt
+    }//end of hp
+    });//end of 1
     });
-    $("#10").click(function(){
+    $("#10W").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpW").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
+        amt = amt - 1
+        hp = 11
+        $("#hpW").html("HP: "+ hp)
+        $("#amtW").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpW").html("Defeated")
+        }//end of amt
+    }//end of hp
+    });//end of 1
+    });//end 10 
+    $("#togW").click(function(){
+      $(".w").toggle();
+    });//end toggle
+    $("#upW").click(function(){
+      amt = amt + 1
+      $("#amtW").html("Amount: "+ amt)
+    });//end of up 
+    $("#downW").click(function(){
+      amt = amt - 1
+      $("#amtW").html("Amount: "+ amt)
+    });//end of down
+    
   });
 </script>
