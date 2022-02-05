@@ -2,8 +2,12 @@
   <p id="gres"></p>
   <h1>Garrett</h1>
   <h2 id="ghp">Hp: 14</h2>
-  <h2>AC: 14</h2>
-  <h2>STR: -1</h2>
+  <button id="STR">STR -1</button>
+  <button id="DEX">SEX +3</button>
+  <button id="CON">CON +1</button>
+  <button id="INT">INT +1</button>
+  <button id="WIS">WIS +0</button>
+  <button id="CHAR">CHAR +3</button>
   <h2>Dex: + 3</h3>
   <button id="sword">Sword</button>
   <button id="bow">Short Bow</button>
@@ -50,7 +54,30 @@
       if(hp <= 0){
       $("#ghp").html("Garret is defeated")
     }
+    });//end of 10
+    $("#STR").click(function(){
+      let num = Math.floor(Math.random()*20) -1
+      $("#gres").html(num);
+    })
+    $("#DEX").click(function(){
+      let num = Math.floor(Math.random()*20) +3
+      $("#gres").html(num);
     });
-    
-  });
+    $("#CON").click(function(){
+      let num = Math.floor(Math.random()*20) +1
+      $("#gres").html(num);
+    });
+    $("#INT").click(function(){
+      let num = Math.floor(Math.random()*20) +1
+      $("#gres").html(num);
+    });
+    $("#WIS).click(function(){
+      let num = Math.floor(Math.random()*20) +0
+      $("#gres").html(num);
+    });
+  $("#CHAR").click(function(){
+      let num = Math.floor(Math.random()*20) +3
+      $("#gres").html(num);
+    });
+  });//end of doc ready
 </script>
