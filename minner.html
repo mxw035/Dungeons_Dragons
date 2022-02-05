@@ -31,6 +31,7 @@ layout: local
 </div>
 <div>
   {% include dice.html %}
+</div>
 <script>
   $("document").ready(function(){
     const word = [
@@ -60,13 +61,13 @@ layout: local
         key: 1, 
         text:"If you agree to join she gives you the name of fang"
       }
-    ];
+    ];//end of above
     const below = [
       {
         key: 0, 
         text: "Oh no reason just curious as to what kind of person could do this to so many innocent people. The more I know the better I can protect the town."
       }
-    ]
+    ];//end of below
     let countT = 0
     let countA = 0
     $("#talk").click(function(){
@@ -84,6 +85,7 @@ layout: local
     $("#n").click(function(){
       let num = countA 
       let text = below[num].text
+      $("#wordsH").html(text)
       countA = countA + 1
     });//end of n 
     $("#comp").click(function(){
