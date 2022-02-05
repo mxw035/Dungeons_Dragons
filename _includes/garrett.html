@@ -22,62 +22,62 @@
     $("#sword").click(function(){
       let num = Math.floor(Math.random() * 6) + 8
       $("#gres").html(num)
-    });
+    });//end of sword
     $("#bow").click(function(){
       let num = Math.floor(Math.random() * 6) + 8 
       $("#gres").html(num)
-    });
+    });//end of bow
     $("#check").click(function(){
       let num = Math.floor(Math.random() * 20) +3
       $("#gres").html(num)
-    });
+    });//end of check
     $("#g1").click(function(){
       let num = 1 
       hp = hp - num 
       $("#ghp").html("HP " + hp)
       if(hp <= 0){
       $("#ghp").html("Garret is defeated")
-    }
-    });
+    }//end of if 0
+    });//end of g1
     $("#g5").click(function(){
       let num = 5 
       hp = hp - num 
       $("#ghp").html("HP " + hp)
       if(hp <= 0){
       $("#ghp").html("Garret is defeated")
-    }
-    });
+    }//end of if hp
+    });//end of g5
     $("#g10").click(function(){
       let num = 10 
       hp = hp - num 
       $("#ghp").html("HP " + hp)
       if(hp <= 0){
       $("#ghp").html("Garret is defeated")
-    }
+    }//end of hp
     });//end of 10
     $("#STR").click(function(){
       let num = Math.floor(Math.random()*20) -1
       $("#gres").html(num);
-    })
+    })//end of STR
     $("#DEX").click(function(){
       let num = Math.floor(Math.random()*20) +3
       $("#gres").html(num);
-    });
+    });//end of dex
     $("#CON").click(function(){
       let num = Math.floor(Math.random()*20) +1
       $("#gres").html(num);
-    });
+    });//end of con
     $("#INT").click(function(){
       let num = Math.floor(Math.random()*20) +1
       $("#gres").html(num);
-    });
-    $("#WIS).click(function(){
+    });//end of int
+    $("#WIS").click(function(){
       let num = Math.floor(Math.random()*20) +0
       $("#gres").html(num);
-    });
+    });//end of wis
   $("#CHAR").click(function(){
       let num = Math.floor(Math.random()*20) +3
       $("#gres").html(num);
-    });
+    });//end of char
   });//end of doc ready
 </script>
