@@ -1,7 +1,10 @@
 
 <div class="w3-half"> 
+  <button id="togHG">Hobgoblin</button>
+  <div class="hg">
   <h1>Hobgoblin</h1>
-  <h2 id="hp">HP: 11 </h2>
+  <h2 id="hpHG">HP: 11 </h2>
+    <p id="amtHG">Amount: 1</p>
   <h2>AC: 18 </h2>
   <h2>Speed 30</h2>
   <h2>STR 12</h2>
@@ -9,38 +12,69 @@
   <h2>LongSword: 5ft, 1d8+1 (5)</h2>
   <h2>Longbow: 150/600ft, 1d8+1 (5)</h2>
   <h2>XP 100 </h2>
+  <button id="1HG">-1</button>
+  <button id="5HG">-5</button>
+  <button id="10HG">-10</button>
 </div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 11
-    $("#1").click(function(){
+    let amt = 1 
+    $("#1HG").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpHG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 11
+        $("#hpHG").html("HP: " + hp)
+        $("#amtHG").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpHG").html("DEFEATED")
+        }//end of if amt 0
+    }//end of if hp 0
     });
-    $("#5").click(function(){
+    $("#5HG").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
-      if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+      $("#hpHG").html("HP " + hp)
+       if(hp <= 0){
+        amt = amt - 1
+        hp = 11
+        $("#hpHG").html("HP: " + hp)
+        $("#amtHG").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpHG").html("DEFEATED")
+        }//end of if amt 0
+    }//end of if hp 0
     });
-    $("#10").click(function(){
+    $("#10HG").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
-      if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
-  });
+      $("#hpHG").html("HP " + hp)
+       if(hp <= 0){
+        amt = amt - 1
+        hp = 11
+        $("#hpHG").html("HP: " + hp)
+        $("#amtHG").html("Amount: " + amt)
+        if(amt <= 0){
+          $("#hpHG").html("DEFEATED")
+        }//end of if amt 0
+    }//end of if hp 0
+    });//end to 10 click
+    $("#upHG").click(function(){
+      amt = amt + 1
+        $("#amtHG").html("Amount: " + amt)
+      
+    })
+    $("#downHG").click(function(){
+      amt = amt - 1
+        $("#amtHG").html("Amount: " + amt)
+      
+    })
+    $("#togHG").click(function(){
+      $(".hg").toggle();
+    })
+  });//end of documnet ready 
 </script>
