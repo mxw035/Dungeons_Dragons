@@ -1,0 +1,32 @@
+<div class="w3-amber">
+  <h1>Thia Money</h1>
+  <h3>Gold</h3>
+  <p id="tgold">11</p>
+  <h3>Silver</h3>
+  <p id="tsilver">28</p>
+  <h3>Copper</h3>
+  <p id="tcopper">196</p>
+  <button id="tmg">-1 Gold</button>
+  <button id="tms">-1 Silver</button>
+  <button id="tmc">-1 Copper</button>
+</div>
+
+<script>
+  $("document").ready(function(){
+  let gold = 12
+  let silver = 23
+  let copper = 200
+  $("#tmg").click(function(){
+    gold = gold - 1
+    $("#tgold").html(gold)
+  });//end of mg
+    $("#tms").click(function(){
+      silver = silver -1
+      $("#tsilver").html(silver)
+    });//end of ms
+    $("#tmc").click(function(){
+      copper = copper -1
+      $("#tcopper").html(copper)
+    });//end of mc 
+  });
+</script>
