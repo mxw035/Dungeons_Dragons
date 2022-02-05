@@ -1,46 +1,80 @@
 
 <div class="w3-half"> 
+  <button id="togOG">Ogre</button>
+  <div class="og">
   <h1>Ogre</h1>
-  <h2 id="hp">HP: 59 </h2>
-  <h2>AC: 11 </h2>
+  <h2 id="hpOG">HP: 59 </h2>
+    <p id="amtOG">Amount: 1</p>
+    <button id="upOG">Up</button>
+    <button id="downOG">Down</button>
+    <h2>AC: 11 </h2>
   <h2>Speed 40 </h2>
   <h2>STR 19</h2>
   <h2>PER 8 </h2>
   <h2>GreatClub 5 ft 2d8 +4 (13)</h2>
   <h2>Javelin 5ft, or 30/120ft, 2d6+4 (11)</h2>
   <h2>XP 450 </h2>
+  <button id="1OG">-1</button>
+  <button id="5OG">-5</button>
+  <button id="10OG">-10</button>
 </div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 59
-    $("#1").click(function(){
+    let amt = 1
+    $("#1OG").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpOG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
-    });
-    $("#5").click(function(){
+        amt = amt - 1
+        hp = 59
+        $("#hpOG").html("HP: " + hp)
+        $("#amtOG").html("Amount: " + amt)
+        if(amt <= 0){
+           $("#hpOG").html("Defeated")
+        }//end of amt 0 
+    }//end of hp 0
+    });//end of 1OG
+    $("#5OG").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpOG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 59
+        $("#hpOG").html("HP: " + hp)
+        $("#amtOG").html("Amount: " + amt)
+        if(amt <= 0){
+           $("#hpOG").html("Defeated")
+        }//end of amt 0 
+    }//end of hp 0
     });
-    $("#10").click(function(){
+    $("#10OG").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpOG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 59
+        $("#hpOG").html("HP: " + hp)
+        $("#amtOG").html("Amount: " + amt)
+        if(amt <= 0){
+           $("#hpOG").html("Defeated")
+        }//end of amt 0 
+    }//end of hp 0
+    });//end of 10 
+    $("#upOG").click(function(){
+      amt = amt + 1
+      $("#amtOG").html("Amount: "+ amt)
+    })
+    $("#downOG").click(function(){
+      amt = amt - 1
+      $("#amtOG").html("Amount: "+ amt)
+    })
+    $("#togOG").click(function(){
+      $(".og").toggle();
     });
   });
 </script>
