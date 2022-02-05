@@ -17,7 +17,6 @@
   <button id="1GH">-1</button>
   <button id="5GH">-5</button>
   <button id="10GH">-10</button>
-  <button id="ghH">Hide</button>
 </div>
 <script>
   $("document").ready(function(){
@@ -65,11 +64,8 @@
         }//end of if amt 0 
       }//end of if hp 0 
     });//end of click 10 
-    $("#ghH").click(function(){
-      $(".gh").hide();
-    });
     $("#ghS").click(function(){
-      $(".gh").show()
+      $(".gh").toggle()
     });
     $("#upGH").click(function(){
       amt = amt + 1
