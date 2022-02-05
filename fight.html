@@ -6,8 +6,12 @@ layout: battle
 
 
 <div>
-  <p id="picked"></p>
-  <button id="dice">Roll</button>
+  <h1>Monsters</h1>
+  <p id="monsters"></p>
+  <h3>Day Time attacks</h3>
+  <button id="day" class="w3-button w3-round w3-amber">Monster</button>
+<h3>Night Time attacks</h3>
+  <button id="night" class="w3-button w3-round w3-amber"> Monster</button>
 </div>
  <div id="stirge" class="battle">
     {% include stirges.html %}
@@ -72,3 +76,5 @@ layout: battle
   
   });//end of ready fxn 
 </script>
+{% include day.html %}
+{% include night.html %}
