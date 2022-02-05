@@ -1,7 +1,11 @@
-
-<div class="w3-half"> 
+<div class="w3-half g">
+  <button id="togG">Goblin</button>
+  <div> 
   <h1>Goblin</h1>
-  <h2 id="hp">HP: 7 </h2>
+  <h2 id="hpG">HP: 7 </h2>
+    <p id="amtG">Amount: 1</p>
+    <button id="upG">Up</button>
+    <button id="downG">Down</button>
   <h2>AC: 15 </h2>
   <h2>Speed 30</h2>
   <h2>STR 8</h2>
@@ -9,38 +13,68 @@
   <h2>Scimitar: 5ft, 1d6+2 (5)</h2>
   <h2>Shortbow: 80ft/320ft, 1d6+2 (5)</h2>
   <h2>XP 50 </h2>
-</div>
-<div class "w3-half">
-  <button id="1">-1</button>
-  <button id="5">-5</button>
-  <button id="10">-10</button>
+  <button id="1g">-1</button>
+  <button id="5g">-5</button>
+  <button id="10g">-10</button>
 </div>
 <script>
   $("document").ready(function(){
     let hp = 7
-    $("#1").click(function(){
+    let amt = 1
+    $("#1g").click(function(){
       let num = 1 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 7
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
     });
-    $("#5").click(function(){
+    $("#5g").click(function(){
       let num = 5 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 7
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
     });
-    $("#10").click(function(){
+    $("#10g").click(function(){
       let num = 10 
       hp = hp - num 
-      $("#hp").html("HP " + hp)
+      $("#hpG").html("HP " + hp)
       if(hp <= 0){
-      $("#hp").html("Defeated")
-    }
+        amt = amt - 1
+        hp = 7
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
     });
-  });
+    $("#upG").click(function(){
+      amt = amt + 1
+        $("#amtG").html("Amount: " + amt)
+      
+    });
+    $("#downG").click(function(){
+      amt = amt - 1
+        $("#amtG").html("Amount: " + amt)
+      
+    });
+    $("#hideG").click(function(){
+      $(".g").toggle();
+                      });
+  });//end of document ready
 </script>
