@@ -2,7 +2,7 @@
 title: Cornberry
 layout: local
 ---
-<div>
+<div class="w3-half">
   <h3>Description</h3>
   <p id="text">The town of Cornberry was once a bustling place with a market area for farmers. However the town has long since been abandoned and sacked by barbarians. 
     It now lays in runis with weeds overgrowing the fallen stone</p>
@@ -19,7 +19,12 @@ layout: local
   <button id="cave">Location of Wave Echo Cave</button>
   <button id="castle">Location of Cragmaw Castle</button>
   <button id="complete">Completed</button>
+  <h3>15 miles south Old Owl Well</h3>
+  <button><a href="old.html">Old Owl Well</a></button>
+  <h3>10 miles south of Old Owl Well is Wyvern Tor</h3>
+  <button><a href="orcT.html">Wyvern Tor</a></button>
 </div>
+{% include dice.html %}
 <script>
   const kind = "Make a DC 15 Charisma/Persuasion check" 
   const win = "The ghostly figure smiles with cold amusement. 'Very well,' she says. 'I know that you seek many things. Ask me one question, and I will give you an answer"
