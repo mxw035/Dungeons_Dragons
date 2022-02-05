@@ -1,0 +1,32 @@
+<div>
+  <h1>Garrett Money</h1>
+  <h3>Gold</h3>
+  <p id="gold">12</p>
+  <h3>Silver</h3>
+  <p id="silver">23</p>
+  <h3>Copper</h3>
+  <p id="copper">200</p>
+  <button id="mg">-1 Gold</button>
+  <button id="ms">-1 Silver</button>
+  <button id="mc">-1 Copper</button>
+</div>
+
+<script>
+  $("document").ready(function(){
+  let gold = 12
+  let silver = 23
+  let copper = 200
+  $("#mg").click(function(){
+    gold = gold - 1
+    $("#gold").html(gold)
+  });//end of mg
+    $("#ms").click(function(){
+      silver = silver -1
+      $("#silver").html(silver)
+    });//end of ms
+    $("#mc").click(function(){
+      copper = copper -1
+      $("#copper").html(copper)
+    });//end of mc 
+  });
+</script>
