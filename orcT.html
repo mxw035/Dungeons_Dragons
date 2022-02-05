@@ -14,7 +14,6 @@ layout: local
 <div >
   <h1>People</h1>
   <p>Lone Orc at the mouth of the cave</p>
-  {% include orcs.html %}
   
 </div>
 <div >
@@ -23,10 +22,19 @@ layout: local
   <p>Brughor Axe-Bitter Orc with 30hp</p>
   <p>Gog the Ogre</p>
   <p>6 ordinary orcs</p>
+  <div class="w3-third">
+    {% include orcs.html %}
+  </div>//end of third
+  <div class="w3-third">
   {% include brug.html %}
-  {% include ogres.html %}
-  {% include players.html %}
-</div>
+  </div>//end of third
+  <div class="w3-third">
+    {% include ogres.html %}
+  </div>//end of third
+</div>//end of battle
+  <div>
+    {% include players.html %}
+</div>//end of players 
 <script>
   $("document").ready(function(){
     const next = [
