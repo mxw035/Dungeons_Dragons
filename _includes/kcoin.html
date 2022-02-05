@@ -1,0 +1,32 @@
+<div class="w3-amber">
+  <h1>Kildrak Money</h1>
+  <h3>Gold</h3>
+  <p id="kgold">62</p>
+  <h3>Silver</h3>
+  <p id="ksilver">32</p>
+  <h3>Copper</h3>
+  <p id="kcopper">196</p>
+  <button id="kmg">-1 Gold</button>
+  <button id="kms">-1 Silver</button>
+  <button id="kmc">-1 Copper</button>
+</div>
+
+<script>
+  $("document").ready(function(){
+  let gold = 12
+  let silver = 23
+  let copper = 200
+  $("#kmg").click(function(){
+    gold = gold - 1
+    $("#kgold").html(gold)
+  });//end of mg
+    $("#kms").click(function(){
+      silver = silver -1
+      $("#ksilver").html(silver)
+    });//end of ms
+    $("#kmc").click(function(){
+      copper = copper -1
+      $("#kcopper").html(copper)
+    });//end of mc 
+  });
+</script>
