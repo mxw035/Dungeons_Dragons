@@ -10,27 +10,21 @@ layout: local
   <button id="btnNext">Next</button>
   <button id="y">Above</button>
   <button id="n">Below</button>
-</div>
+</div>//end of description
 <div >
   <h1>People</h1>
   <p>Lone Orc at the mouth of the cave</p>
   
-</div>
-<div >
+</div>//end of people
+<div>
   <h1>Battle</h1>
   <h3>Brughor's Band</h3>
   <p>Brughor Axe-Bitter Orc with 30hp</p>
   <p>Gog the Ogre</p>
   <p>6 ordinary orcs</p>
-  <div class="w3-third">
     {% include orcs.html %}
-  </div>//end of third
-  <div class="w3-third">
-  {% include brug.html %}
-  </div>//end of third
-  <div class="w3-third">
+    {% include brug.html %}
     {% include ogres.html %}
-  </div>//end of third
 </div>//end of battle
   <div>
     {% include players.html %}
