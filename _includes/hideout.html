@@ -21,10 +21,11 @@
 </div>
 <script>
   $("document").ready(function(){
+    $("div").hide();
     $(".rh").hide();
     $("#hide").click(function(){
       $(".rh").toggle();
-    });
-  });
+    });//end of click hide 
+  });// end of doc ready
 </script>
 {% include cellar.html %}
