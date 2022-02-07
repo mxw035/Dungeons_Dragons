@@ -2,7 +2,7 @@
 <div class="shop w3-half">
   <h2>WorkShop</h2>
   <p>This room appears to be the wizards workshop. A rat scurries across the floor and takes refuge under a large worktable set up with alembics, retorts, distillation coils, and other alchemical devices, all of it stewing and bubbling away. Bookshelves are crowded with sheaves of parchemnet and strange-looking tomes"</p>
-  <p class="deskDC"></p>
+  <p id="deskDC"></p>
   <button id="desk">Desk</button>
   <button id="yes">Sucess</button>
   <button id="no">Fail</button>
@@ -11,13 +11,13 @@
   $("document").ready(function(){
     
     $("#desk").click(function(){
-      $(".deskDC").html("DC 12 INT check");
+      $("#deskDC").html("DC 12 INT check");
     });//end of click desk 
     $("#yes").click(function(){
-      $(".deskDC").html("will show that Irano is working to make a potion of invisibility but has not yet been able to master the potion. This might be the information that Halia was looking for."});
+      $("#deskDC").html("will show that Irano is working to make a potion of invisibility but has not yet been able to master the potion. This might be the information that Halia was looking for."});
     });//end of yes 
     $("#no").click(function(){
-      $(".deskDC").html("You invegsitgate the potions being created but unfortunately the skill is out of you depth")
+      $("#deskDC").html("You invegsitgate the potions being created but unfortunately the skill is out of you depth")
     });//end of no
   });//end document ready
 </script>
