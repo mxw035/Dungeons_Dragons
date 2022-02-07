@@ -12,7 +12,12 @@
 </div>
 <script>
   $("document").ready(function(){
-   
+    $(".maw").hide();
+    $(".staff").hide();
+    $(".bar").hide();
+    $("#hidebar").click(function(){
+      $(".bar").toggle();
+    });//end of hidebar 
     $("#glass").click(function(){
       $(".staff").toggle();
     });//end of glass click
