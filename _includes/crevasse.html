@@ -5,31 +5,23 @@
   <p>he Goblin leads you to north end of the crevasse going across the bridge traveling west. 
 "Glassstaff's workshop and quarters are located to the north west of the hideout. Follow me but dont look down. There is still a monster that gaurds the pit". The south bridge will collapse when you cross it. The Nothic lives in the pit now since you all rid the area of redbrands. If he gives you trouble just give him food and he will let you pass. </p>
   <button id="noth">Nothic</button>
-  <p class="next"></p>
+  <p id="next"></p>
   <button id="fight"><a href="nothic.html" target="_blank">Fight</a></button>
   <button id="feed">Feed</button>
 </div>
 <script>
   $("document").ready(function(){
-    $(".vase").hide();
-    $(".next").hide();
-    $("#hidecre").click(function(){
-      $(".vase").toggle();
-    });//end hide
     $("#noth").click(function(){
-      $(".next").show();
       let num = Math.floor(Math.random() * 2)
       if(num === 2){
-        $(".next").html(" The Nothic approches the party")
+        $("#next").html(" The Nothic approches the party")
       }//end of if 2
       else {
-        $(".next").show();
-        $(".next").html("The nothic is no where to be seen")
+        $("#next").html("The nothic is no where to be seen")
       }//end of if else 
     });//end of nothic
     $("#feed").click(function(){
-      $(".next").show();
-      $(".next").html("You give the nothic food. It takes the food and runs under the bridge into the crevasse letting you pass")
+      $("#next").html("You give the nothic food. It takes the food and runs under the bridge into the crevasse letting you pass")
     });//end of feed
     
   });//document ready
