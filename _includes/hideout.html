@@ -23,12 +23,16 @@
   $("document").ready(function(){
     $(".cell").hide();
     $(".rh").hide();
+    $(".vase").hide();
     $("#hide").click(function(){
       $(".rh").toggle();
     });//end of click hide 
     $("#hidecell").click(function(){
       $(".cell").toggle();
     });
+    $("#hidecre").click(function(){
+      $(".vase").toggle();
+    });//end of hidecre
   });// end of doc ready
 </script>
 {% include cellar.html %}
