@@ -11,20 +11,32 @@
 </div>
 <script>
   $("document").ready(function(){
+    const above =[
+      {
+        key: 0, 
+        text: "You are able to open the barrells and have a glass of ale."
+      }, 
+      {
+        key: 1, 
+        text: "You find  waters proof bags holding a potion of healing, potion of invisibility, 50 gp, and a clean set of travel clothing. "
+      }
+    ];
+    let count = 0
     $("#barrels").click(function(){
       $("#next").html("DC 10 Strength Check")
-    $("#suc").click(function(){
-      $("#next").html("You are able to open the barrells and have a glass of ale.")                
-    });//end of sucess
     });//end of barrells 
     $("#cistern").click(function(){
       $("#next").html("DC 15 Wisdom Perception check")
-      $("#suc").click(){
-        $("#next").html("You find  waters proof bags holding a potion of healing, potion of invisibility, 50 gp, and a clean set of travel clothing. ")
-      });//end of cistern check
     });//end of cistern 
       $("#fail").click(function(){
         $("#next").html("You notice nothing unordinary")
+        count = count + 1
       });//end of fail
+    $("#suc").click(function(){
+      let num = 0 
+      let text = above[num].text
+      $("#next").html(text)
+      count = count + 1
+   });
   });//end of doc ready
 </script>
