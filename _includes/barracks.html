@@ -1,0 +1,25 @@
+<button id="hidebar">Barracks</button>
+<div class="bar w3-half">
+  <h2>Barracks</h2>
+  <p>This appears to be a storeroom pressed into service as living quarters. Two double bunks stand against the wall near the door, while barrels and crates fill the southern half of the chamber.</p>
+  <p>On one of the lower bunks sits a Goblin. He looks at the adventures with a look of shear terror on his face. "Please dont hurt me. I never wanted to be a part of this. My family started to follow Glasstaff when I was young. I didnt have a choice. Maybe I could help you?</p>
+  <button id="cragmaw">Cragmaw Castle Location</button>
+  <p class="maw">Cragmaw castle. Yes it has long been taken over by Goblins. I am not sure if your friends are there. It has been years since I have been to the castle and because of my reluctance to terrorize the town I was not often informed of current plans or information. </p>
+  <p class="maw">You will find the castle in the South West portion of the Neverwinter Wood. It is about 25 miles east of the High Road and 15 miles north of the Triboar Trail. If you leave town heading East and travel for 5 miles on the Triboar trail you should be able to find a secret but well worn path leading north. This trail will take you right to the castle. </p>
+  <button id="glass">Glasstaff's Quarters</button>
+  <p class="staff">Oh you  wish to see Glasstafs Quarters? Maybe I can help? Follow  me I will lead the way.</p>
+    
+</div>
+<script>
+  $("document").ready(function(){
+    $(".maw").hide();
+    $(".staff").hide();
+    $("#cragmaw").click(function(){
+      $(".maw").toggle();
+  });//end of cragmaw click
+    $("#glass").click(function(){
+      $(".staff").toggle();
+    });//end of glass click
+  });//end of doc ready
+  
+</script>
