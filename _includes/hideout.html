@@ -21,6 +21,10 @@
 </div>
 <script>
   $("document").ready(function(){
+    $(".gq").hide();
+    $("#gQuart").click(function(){
+      $(".gq").toggle();
+    });//end of gQuart
     $(".shop").hide();
     $("#work").click(function(){
       $(".shop").toggle();
@@ -43,3 +47,4 @@
 {% include barracks.html %}
 {% include crevasse.html %}
 {% include workshop.html %}
+{% include quarters.html %}
