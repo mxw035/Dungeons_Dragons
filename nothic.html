@@ -2,4 +2,82 @@
 title: Nothic
 layout: battle
 ---
-<h2>Nothic</h2>
+<div class="w3-third">
+<button id="ghS">Nothic</button>
+<div class="gh mon" > 
+  <h1>Nothic</h1>
+  <h2 id="hpGH">HP: 45 </h2>
+  <p id="amtGH">Amount: 1</p>
+  <button id="upGH">Up</button>
+  <button id="downGH">Down</button>
+  <h2>AC: 15 </h2>
+  <h2>Speed 30</h2>
+  <h2>STR 14</h2>
+  <h2>PER 12 </h2>
+  <h2>Claws: 5ft, 1d6+3 (6)</h2>
+  <h2>Rotting Gaze: Player needs DC 12 consitiution to avoid attack else (10) or 3d6</h2>
+  <h2>XP 450 </h2>
+
+  <button id="1GH">-1</button>
+  <button id="5GH">-5</button>
+  <button id="10GH">-10</button>
+</div>
+<script>
+  $("document").ready(function(){
+    let hp = 45
+    let amt = 1
+    $("#1GH").click(function(){
+      let num = 1 
+      hp = hp - num 
+      $("#hpGH").html("HP: " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 22
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 1
+    $("#5GH").click(function(){
+      let num = 5 
+      hp = hp - num 
+       $("#hpGH").html("HP: " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 22
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 5
+    $("#10GH").click(function(){
+      let num = 10 
+      hp = hp - num 
+       $("#hpGH").html("HP: " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 22
+        $("#amtGH").html("Amount: " + amt)
+        $("#hpGH").html("HP: " + hp)
+        if(amt <= 0){
+          $("#hpGH").html("Defeated")
+        }//end of if amt 0 
+      }//end of if hp 0 
+    });//end of click 10 
+    $("#ghS").click(function(){
+      $(".gh").toggle()
+    });
+    $("#upGH").click(function(){
+      amt = amt + 1
+      $("#amtGH").html("Amount: "+ amt)
+    });
+    $("#downGH").click(function(){
+      amt = amt - 1
+      $("#amtGH").html("Amount: " + amt)
+    });
+  });
+</script>
