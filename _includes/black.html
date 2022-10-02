@@ -1,0 +1,78 @@
+<div class="w3-third">
+  <button id="togG">Black Spider</button>
+  <div class="g mon"> 
+  <h1>Black Spider</h1>
+  <h2 id="hpG">HP: 27 </h2>
+    <p id="amtG">Amount: 1</p>
+    <button id="upG">Up</button>
+    <button id="downG">Down</button>
+  <h2>AC: 11 </h2>
+  <h2>Speed 30</h2>
+  <h2>STR 9</h2>
+  <h2>PER 13 </h2>
+  
+  <button id="1g">-1</button>
+  <button id="5g">-5</button>
+  <button id="10g">-10</button>
+</div>
+<script>
+  $("document").ready(function(){
+    let hp = 27
+    let amt = 1
+    $("#1g").click(function(){
+      let num = 1 
+      hp = hp - num 
+      $("#hpG").html("HP " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 7
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
+    });
+    $("#5g").click(function(){
+      let num = 5 
+      hp = hp - num 
+      $("#hpG").html("HP " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 27
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
+    });
+    $("#10g").click(function(){
+      let num = 10 
+      hp = hp - num 
+      $("#hpG").html("HP " + hp)
+      if(hp <= 0){
+        amt = amt - 1
+        hp = 27
+        $("#hpG").html("HP: " + hp)
+        $("#amtG").html("Amount: " + amt)
+        if(amt <= 0){
+      $("#hpG").html("Defeated")
+        }//end of if amt 0 
+    }//end of if hp 0 
+    });
+    $("#upG").click(function(){
+      amt = amt + 1
+        $("#amtG").html("Amount: " + amt)
+      
+    });
+    $("#downG").click(function(){
+      amt = amt - 1
+        $("#amtG").html("Amount: " + amt)
+      
+    });
+    $("#togG").click(function(){
+      $(".g").toggle();
+                      });
+  });//end of document ready
+</script>
